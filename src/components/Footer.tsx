@@ -9,7 +9,7 @@ const Footer = () => {
           
           <div className="flex space-x-6">
             <a 
-              href="https://instagram.com/viniciusramos.design" 
+              href="https://www.instagram.com/vrpdesigner/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-text-muted hover:text-hero-primary transition-smooth"
