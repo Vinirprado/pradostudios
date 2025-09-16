@@ -25,7 +25,7 @@ const Footer = () => {
               LinkedIn
             </a>
             <a 
-              href="https://behance.net/viniciusramos" 
+              href="https://www.behance.net/viniciusramosdoprado" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-text-muted hover:text-hero-primary transition-smooth"
