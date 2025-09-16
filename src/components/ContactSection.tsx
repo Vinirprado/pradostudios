@@ -2,8 +2,7 @@ import { Button } from '@/components/ui/button';
 
 const ContactSection = () => {
   const handleContact = () => {
-    // Replace with actual WhatsApp or email
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
+    window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
   };
 
   return (
