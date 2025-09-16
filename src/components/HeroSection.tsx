@@ -1,0 +1,37 @@
+import { Button } from '@/components/ui/button';
+
+const HeroSection = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contato');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
+      <div className="container mx-auto text-center max-w-4xl">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-hero-primary mb-8 tracking-tight leading-none">
+          Transformo ideias em identidades visuais que marcam presença.
+        </h1>
+        
+        <p className="text-xl md:text-2xl text-hero-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
+          Vinicius Ramos — Designer especializado em Identidade Visual Completa.
+        </p>
+        
+        <Button 
+          variant="hero" 
+          onClick={scrollToContact}
+          className="inline-flex items-center"
+        >
+          Começar meu projeto
+          <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </Button>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
