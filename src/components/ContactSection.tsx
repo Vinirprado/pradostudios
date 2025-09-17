@@ -9,9 +9,8 @@ const ContactSection = () => {
           Pronto para transformar sua marca em uma identidade inesquecível?
         </h2>
         
-        <p className="text-lg md:text-xl text-text-secondary mb-12 leading-relaxed">
-          Vamos conversar sobre o seu projeto e criar juntos uma identidade visual que faça a diferença.
-        </p>
+        <p className="text-lg md:text-xl text-text-secondary mb-12 leading-relaxed">Design fala quando palavras não são suficientes.
+Quem investe em design, economiza explicações.</p>
         
         <Button variant="hero" onClick={handleContact} className="inline-flex items-center">
           Fale comigo
