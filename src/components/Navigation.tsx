@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import pradoStudioLogo from '@/assets/prado-studio-logo.png';
+import pradoStudioLogo from '@/assets/prado-studio-logo-extended.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
