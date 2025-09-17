@@ -2,56 +2,40 @@ import varandaCo from '@/assets/varanda-co.png';
 import apolocred from '@/assets/apolocred.png';
 import brainstormAcademy from '@/assets/brainstorm-academy.png';
 import aquaAmerica from '@/assets/aqua-america.png';
-
 const PortfolioSection = () => {
-  const projects = [
-    {
-      image: varandaCo,
-      title: "Varanda & Co.",
-      description: "Identidade visual desenvolvida para cafeteria com intuito de trazer a apreciação real do café e do momento, trazendo sofisticação e proximidade."
-    },
-    {
-      image: apolocred,
-      title: "Apolocred",
-      description: "A Apolocred nasceu com a missão de tornar o acesso à consultoria financeira algo simples, estratégico e de qualidade."
-    },
-    {
-      image: brainstormAcademy,
-      title: "Brainstorm Academy",
-      description: "Abandonamos os clichês e optamos por um visual mais limpo, moderno e inspirador. O objetivo era transmitir uma sensação de inovação e comprometimento com altos padrões no ambiente escolar."
-    },
-    {
-      image: aquaAmerica,
-      title: "Aqua America",
-      description: "A essência da marca trás o foco em pureza, revitalização e excelência natural. Os principais atributos estão enraizados em oferecer qualidade imaculada, promover o bem-estar e abraçar o que há de melhor na natureza."
-    }
-  ];
-
-  return (
-    <section id="projetos" className="py-24 px-6">
+  const projects = [{
+    image: varandaCo,
+    title: "Varanda & Co.",
+    description: "Identidade visual desenvolvida para cafeteria com intuito de trazer a apreciação real do café e do momento, trazendo sofisticação e proximidade."
+  }, {
+    image: apolocred,
+    title: "Apolocred",
+    description: "A Apolocred nasceu com a missão de tornar o acesso à consultoria financeira algo simples, estratégico e de qualidade."
+  }, {
+    image: brainstormAcademy,
+    title: "Brainstorm Academy",
+    description: "Abandonamos os clichês e optamos por um visual mais limpo, moderno e inspirador. O objetivo era transmitir uma sensação de inovação e comprometimento com altos padrões no ambiente escolar."
+  }, {
+    image: aquaAmerica,
+    title: "Aqua America",
+    description: "A essência da marca trás o foco em pureza, revitalização e excelência natural. Os principais atributos estão enraizados em oferecer qualidade imaculada, promover o bem-estar e abraçar o que há de melhor na natureza."
+  }];
+  return <section id="projetos" className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-hero-primary mb-8">
+          <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">
             Projetos
           </h2>
           
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed md:text-lg">
             Algumas identidades que desenvolvi, cada uma com sua história e essência únicas.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index}
-              className="group bg-gradient-card rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]"
-            >
+          {projects.map((project, index) => <div key={index} className="group bg-gradient-card rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={`Projeto ${project.title} - Identidade Visual`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img src={project.image} alt={`Projeto ${project.title} - Identidade Visual`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               
               <div className="p-8">
@@ -62,12 +46,9 @@ const PortfolioSection = () => {
                   {project.description}
                 </p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PortfolioSection;

@@ -19,7 +19,7 @@ const ProcessSection = () => {
   return <section id="processo" className="py-24 px-6 bg-surface-subtle">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-hero-primary mb-8">
+          <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">
             Meu Processo Criativo
           </h2>
           

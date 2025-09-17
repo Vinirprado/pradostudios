@@ -15,9 +15,9 @@ const ServicesSection = () => {
   return <section id="servicos" className="py-24 px-6 bg-surface-subtle">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-hero-primary mb-8">Serviços</h2>
+          <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">Serviços</h2>
           
-          <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed md:text-lg">
             Cada detalhe importa. Meu processo vai além do design: envolve pesquisa, estratégia e a criação de uma identidade que comunica a essência da sua marca de forma clara e memorável.
           </p>
         </div>
