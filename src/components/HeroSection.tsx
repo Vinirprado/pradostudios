@@ -14,7 +14,7 @@ const HeroSection = () => {
           Transformo ideias em identidades visuais que marcam presença.
         </h1>
         
-        <p className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-slate-950 md:text-3xl">
+        <p className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-slate-950 md:text-lg">
           Vinicius Ramos — Designer especializado em Identidade Visual Completa.
         </p>
         
