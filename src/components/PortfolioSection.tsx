@@ -1,6 +1,6 @@
 import varandaCo from '@/assets/varanda-co.png';
 import apolocred from '@/assets/apolocred.png';
-import portfolio3 from '@/assets/portfolio-3.jpg';
+import brainstormAcademy from '@/assets/brainstorm-academy.png';
 import portfolio4 from '@/assets/portfolio-4.jpg';
 
 const PortfolioSection = () => {
@@ -16,9 +16,9 @@ const PortfolioSection = () => {
       description: "A Apolocred nasceu com a missão de tornar o acesso à consultoria financeira algo simples, estratégico e de qualidade."
     },
     {
-      image: portfolio3,
-      title: "Moda Essence",
-      description: "Branding completo para marca de moda, equilibrando elegância e contemporaneidade."
+      image: brainstormAcademy,
+      title: "Brainstorm Academy",
+      description: "Abandonamos os clichês e optamos por um visual mais limpo, moderno e inspirador. O objetivo era transmitir uma sensação de inovação e comprometimento com altos padrões no ambiente escolar."
     },
     {
       image: portfolio4,
