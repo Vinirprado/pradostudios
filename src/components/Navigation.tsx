@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import pradoStudioLogo from '@/assets/prado-studio-logo.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
@@ -13,8 +14,12 @@ const Navigation = () => {
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-6 py-4 rounded-sm bg-[#fcfcfc]/0">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-display font-semibold text-hero-primary">
-            Vinicius Ramos
+          <div className="flex items-center">
+            <img 
+              src={pradoStudioLogo} 
+              alt="Prado Studio Logo" 
+              className="h-8"
+            />
           </div>
           
           {/* Desktop Navigation */}
