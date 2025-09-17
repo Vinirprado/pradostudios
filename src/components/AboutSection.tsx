@@ -1,4 +1,4 @@
-import viniciusPortrait from '@/assets/vinicius-portrait.jpg';
+import viniciusPortrait from '@/assets/vinicius-new-portrait.jpg';
 
 const AboutSection = () => {
   return (
