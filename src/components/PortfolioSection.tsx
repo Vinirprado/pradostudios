@@ -1,7 +1,7 @@
 import varandaCo from '@/assets/varanda-co.png';
 import apolocred from '@/assets/apolocred.png';
 import brainstormAcademy from '@/assets/brainstorm-academy.png';
-import portfolio4 from '@/assets/portfolio-4.jpg';
+import aquaAmerica from '@/assets/aqua-america.png';
 
 const PortfolioSection = () => {
   const projects = [
@@ -21,9 +21,9 @@ const PortfolioSection = () => {
       description: "Abandonamos os clichês e optamos por um visual mais limpo, moderno e inspirador. O objetivo era transmitir uma sensação de inovação e comprometimento com altos padrões no ambiente escolar."
     },
     {
-      image: portfolio4,
-      title: "Creative Hub",
-      description: "Identidade visual para agência criativa, expressando inovação e personalidade única."
+      image: aquaAmerica,
+      title: "Aqua America",
+      description: "A essência da marca trás o foco em pureza, revitalização e excelência natural. Os principais atributos estão enraizados em oferecer qualidade imaculada, promover o bem-estar e abraçar o que há de melhor na natureza."
     }
   ];
 
