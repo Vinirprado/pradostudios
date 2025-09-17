@@ -8,13 +8,27 @@ const HeroSection = () => {
       });
     }
   };
-  return <section className="min-h-screen flex items-center justify-center px-6 pt-20 bg-slate-50">
-      <div className="container mx-auto text-center max-w-4xl">
-        <h1 className="text-5xl md:text-7xl font-display font-bold mb-8 tracking-tight leading-none text-slate-950 text-center lg:text-8xl">
+  return <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+      {/* Video Background */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/src/assets/hero-background-video.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30 z-10"></div>
+      
+      <div className="container mx-auto text-center max-w-4xl relative z-20">
+        <h1 className="text-5xl md:text-7xl font-display font-bold mb-8 tracking-tight leading-none text-white text-center lg:text-8xl drop-shadow-lg">
           Transformo ideias em identidades visuais que marcam presença.
         </h1>
         
-        <p className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-slate-950 md:text-lg">
+        <p className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-white md:text-lg drop-shadow-md">
           Vinicius Ramos — Designer especializado em Identidade Visual Completa.
         </p>
         
