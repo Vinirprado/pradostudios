@@ -1,4 +1,4 @@
-import portfolio1 from '@/assets/portfolio-1.jpg';
+import varandaCo from '@/assets/varanda-co.png';
 import portfolio2 from '@/assets/portfolio-2.jpg';
 import portfolio3 from '@/assets/portfolio-3.jpg';
 import portfolio4 from '@/assets/portfolio-4.jpg';
@@ -6,9 +6,9 @@ import portfolio4 from '@/assets/portfolio-4.jpg';
 const PortfolioSection = () => {
   const projects = [
     {
-      image: portfolio1,
-      title: "TechFlow",
-      description: "Identidade desenvolvida para startup de tecnologia, transmitindo sofisticação e proximidade."
+      image: varandaCo,
+      title: "Varanda & Co.",
+      description: "Identidade visual desenvolvida para cafeteria com intuito de trazer a apreciação real do café e do momento, trazendo sofisticação e proximidade."
     },
     {
       image: portfolio2,
