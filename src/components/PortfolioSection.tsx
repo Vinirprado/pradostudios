@@ -1,5 +1,5 @@
 import varandaCo from '@/assets/varanda-co.png';
-import portfolio2 from '@/assets/portfolio-2.jpg';
+import apolocred from '@/assets/apolocred.png';
 import portfolio3 from '@/assets/portfolio-3.jpg';
 import portfolio4 from '@/assets/portfolio-4.jpg';
 
@@ -11,9 +11,9 @@ const PortfolioSection = () => {
       description: "Identidade visual desenvolvida para cafeteria com intuito de trazer a apreciação real do café e do momento, trazendo sofisticação e proximidade."
     },
     {
-      image: portfolio2,
-      title: "Verde Gourmet",
-      description: "Sistema visual criado para restaurante premium, destacando autenticidade e modernidade."
+      image: apolocred,
+      title: "Apolocred",
+      description: "A Apolocred nasceu com a missão de tornar o acesso à consultoria financeira algo simples, estratégico e de qualidade."
     },
     {
       image: portfolio3,
