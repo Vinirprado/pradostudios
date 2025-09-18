@@ -17,31 +17,17 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/">
-              <img 
-                src={pradoStudioLogo} 
-                alt="Prado Studio Logo" 
-                className="h-10 hover:opacity-90 transition-smooth cursor-pointer"
-              />
+              <img src={pradoStudioLogo} alt="Prado Studio Logo" className="h-10 hover:opacity-90 transition-smooth cursor-pointer" />
             </Link>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('sobre')} className="transition-smooth text-base text-slate-50 rounded-none bg-[#000a0e]/0">
-              Sobre
-            </button>
-            <button onClick={() => scrollToSection('servicos')} className="text-text-secondary hover:text-hero-primary transition-smooth">
-              Serviços
-            </button>
-            <button onClick={() => scrollToSection('projetos')} className="text-text-secondary hover:text-hero-primary transition-smooth">
-              Projetos
-            </button>
-            <button onClick={() => scrollToSection('processo')} className="text-text-secondary hover:text-hero-primary transition-smooth">
-              Processo
-            </button>
-            <button onClick={() => scrollToSection('contato')} className="text-text-secondary hover:text-hero-primary transition-smooth">
-              Contato
-            </button>
+            <button onClick={() => scrollToSection('sobre')} className="transition-smooth bg-[#000a0e]/0 rounded-none text-base text-zinc-50">SOBRE</button>
+            <button onClick={() => scrollToSection('servicos')} className="text-text-secondary hover:text-hero-primary transition-smooth">SERVIÇOS</button>
+            <button onClick={() => scrollToSection('projetos')} className="text-text-secondary hover:text-hero-primary transition-smooth">PROJETOS</button>
+            <button onClick={() => scrollToSection('processo')} className="text-text-secondary hover:text-hero-primary transition-smooth">PROCESSO</button>
+            <button onClick={() => scrollToSection('contato')} className="text-text-secondary hover:text-hero-primary transition-smooth">CONTATO</button>
           </div>
 
           {/* Mobile Menu Button */}
