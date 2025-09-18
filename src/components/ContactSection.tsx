@@ -1,10 +1,18 @@
 import { Button } from '@/components/ui/button';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+
 const ContactSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const handleContact = () => {
     window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
   };
-  return <section id="contato" className="py-24 px-6">
-      <div className="container mx-auto max-w-4xl text-center">
+  return <section id="contato" className="py-24 px-6" ref={ref}>
+      <div className={`container mx-auto max-w-4xl text-center transition-all duration-1000 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-10'
+      }`}>
         <h2 className="text-4xl md:text-6xl font-display font-bold text-hero-primary mb-8 leading-tight">
           Pronto para transformar sua marca em uma identidade inesquecível?
         </h2>

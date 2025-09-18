@@ -1,10 +1,17 @@
 import viniciusPortrait from '@/assets/vinicius-new-portrait.jpg';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const AboutSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   return (
-    <section id="sobre" className="py-24 px-6">
+    <section id="sobre" className="py-24 px-6" ref={ref}>
       <div className="container mx-auto max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-1000 ${
+          isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-10'
+        }`}>
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-hero-primary leading-tight">
               Sobre Mim

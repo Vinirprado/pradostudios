@@ -1,4 +1,8 @@
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+
 const ServicesSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const services = [{
     title: "Identidade Visual Completa",
     description: "Desenvolvimento completo da marca, desde o conceito até as aplicações finais."
@@ -12,8 +16,12 @@ const ServicesSection = () => {
     title: "Consultoria Visual",
     description: "Análise e orientação para melhorar a presença visual da sua marca."
   }];
-  return <section id="servicos" className="py-24 px-6 bg-surface-subtle">
-      <div className="container mx-auto max-w-6xl">
+  return <section id="servicos" className="py-24 px-6 bg-surface-subtle" ref={ref}>
+      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-10'
+      }`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">Serviços</h2>
           

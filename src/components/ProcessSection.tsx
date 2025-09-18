@@ -1,4 +1,8 @@
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+
 const ProcessSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const processSteps = [{
     number: "01",
     title: "Descoberta & Pesquisa",
@@ -16,8 +20,12 @@ const ProcessSection = () => {
     title: "Entrega & Manual de Marca",
     description: "Aplicações claras e guia para consistência visual."
   }];
-  return <section id="processo" className="py-24 px-6 bg-surface-subtle">
-      <div className="container mx-auto max-w-6xl">
+  return <section id="processo" className="py-24 px-6 bg-surface-subtle" ref={ref}>
+      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-10'
+      }`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">
             Meu Processo Criativo

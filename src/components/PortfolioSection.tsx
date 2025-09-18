@@ -1,10 +1,13 @@
 import { useNavigate } from 'react-router-dom';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import varandaCo from '@/assets/varanda-co.png';
 import apolocred from '@/assets/apolocred.png';
 import brainstormAcademy from '@/assets/brainstorm-academy.png';
 import aquaAmerica from '@/assets/aqua-america.png';
+
 const PortfolioSection = () => {
   const navigate = useNavigate();
+  const { ref, isVisible } = useScrollReveal();
   
   const projects = [{
     image: varandaCo,
@@ -27,8 +30,12 @@ const PortfolioSection = () => {
     description: "A essência da marca trás o foco em pureza, revitalização e excelência natural. Os principais atributos estão enraizados em oferecer qualidade imaculada, promover o bem-estar e abraçar o que há de melhor na natureza.",
     link: "/projeto/aqua-america"
   }];
-  return <section id="projetos" className="py-24 px-6">
-      <div className="container mx-auto max-w-6xl">
+  return <section id="projetos" className="py-24 px-6" ref={ref}>
+      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-10'
+      }`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">
             Projetos
