@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import pradoStudioLogo from '@/assets/prado-studio-logo-extended.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4 rounded-sm bg-[#fcfcfc]/0">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img 
-              src={pradoStudioLogo} 
-              alt="Prado Studio Logo" 
-              className="h-8"
-            />
+            <Link to="/">
+              <img 
+                src={pradoStudioLogo} 
+                alt="Prado Studio Logo" 
+                className="h-10 hover:opacity-90 transition-smooth cursor-pointer"
+              />
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
