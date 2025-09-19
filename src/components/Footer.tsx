@@ -1,36 +1,45 @@
+import { Instagram, Linkedin, Globe } from 'lucide-react';
+import pradoStudioLogo from '@/assets/prado-studio-logo-white.png';
+
 const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border/30">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-text-muted mb-4 md:mb-0">
-            © 2024 Vinicius Ramos. Todos os direitos reservados.
+          <div className="flex items-center space-x-4">
+            <img src={pradoStudioLogo} alt="Prado Studio Logo" className="h-8" />
+            <div className="text-text-muted">
+              © 2024 Prado Studio. Todos os direitos reservados.
+            </div>
           </div>
           
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 mt-4 md:mt-0">
             <a 
               href="https://www.instagram.com/vrpdesigner/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-text-muted hover:text-hero-primary transition-smooth"
+              aria-label="Instagram"
             >
-              Instagram
+              <Instagram size={20} />
             </a>
             <a 
               href="https://linkedin.com/in/viniciusramosdesign" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-text-muted hover:text-hero-primary transition-smooth"
+              aria-label="LinkedIn"
             >
-              LinkedIn
+              <Linkedin size={20} />
             </a>
             <a 
               href="https://www.behance.net/viniciusramosdoprado" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-text-muted hover:text-hero-primary transition-smooth"
+              aria-label="Behance"
             >
-              Behance
+              <Globe size={20} />
             </a>
           </div>
         </div>

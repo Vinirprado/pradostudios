@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import pradoStudioLogo from '@/assets/prado-studio-logo-extended.png';
+import pradoStudioLogo from '@/assets/prado-studio-logo-white.png';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
