@@ -1,33 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-
 const ContactSection = () => {
-  const { ref, isVisible } = useScrollReveal();
-  
+  const {
+    ref,
+    isVisible
+  } = useScrollReveal();
   const handleContact = () => {
     window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
   };
-
-  return (
-    <section id="contato" className="py-24 px-6" ref={ref}>
-      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-10'
-      }`}>
+  return <section id="contato" className="py-24 px-6" ref={ref}>
+      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-auto">
           {/* Card 1 - Main CTA */}
           <Card className="bg-hero-primary text-white border-0 flex items-center justify-center min-h-[300px]">
             <CardContent className="p-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight">
+              <h2 className="text-3xl font-display font-bold mb-6 leading-tight text-gray-950 md:text-6xl">
                 Pronto para transformar sua marca em uma identidade inesquecível?
               </h2>
-              <Button 
-                variant="outline" 
-                onClick={handleContact} 
-                className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-hero-primary transition-smooth"
-              >
+              <Button variant="outline" onClick={handleContact} className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-hero-primary transition-smooth">
                 Fale comigo
               </Button>
             </CardContent>
@@ -65,7 +56,6 @@ const ContactSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default ContactSection;
