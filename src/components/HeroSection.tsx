@@ -9,10 +9,10 @@ const HeroSection = () => {
     }
   };
   return <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-      {/* GIF Background */}
+      {/* Wallpaper Background */}
       <img 
-        src="/src/assets/hero-background.gif"
-        alt="Background animation"
+        src="/src/assets/hero-wallpaper.png"
+        alt="Background gradient"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
       
