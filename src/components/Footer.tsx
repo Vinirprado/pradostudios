@@ -1,5 +1,5 @@
 import { Instagram, Linkedin, ExternalLink } from 'lucide-react';
-import pradoStudioLogo from '@/assets/prado-studio-logo-white.png';
+import pradoStudioLogo from '@/assets/prado-studio-logo-color.png';
 const Footer = () => {
   return <footer className="py-12 px-6 border-t border-border/30">
       <div className="container mx-auto max-w-6xl">
