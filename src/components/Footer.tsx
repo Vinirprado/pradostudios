@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Globe } from 'lucide-react';
+import { Instagram, Linkedin, ExternalLink } from 'lucide-react';
 import pradoStudioLogo from '@/assets/prado-studio-logo-white.png';
 
 const Footer = () => {
@@ -39,7 +39,7 @@ const Footer = () => {
               className="text-text-muted hover:text-hero-primary transition-smooth"
               aria-label="Behance"
             >
-              <Globe size={20} />
+              <ExternalLink size={20} />
             </a>
           </div>
         </div>
