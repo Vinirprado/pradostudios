@@ -25,7 +25,7 @@ const ContactSection = () => {
           </Card>
 
           {/* Card 2 - Philosophy */}
-          <Card className="bg-background border border-border/20 flex items-center justify-center min-h-[300px]">
+          <Card className="border border-border/20 flex items-center justify-center min-h-[300px] bg-stone-700">
             <CardContent className="p-8 text-center">
               <p className="text-xl md:text-2xl text-text-primary font-medium leading-relaxed">
                 Design fala quando palavras não são suficientes. Quem investe em design, economiza explicações.
@@ -37,7 +37,7 @@ const ContactSection = () => {
           <Card className="bg-gradient-to-br from-card to-card/80 border border-border/20 flex items-center justify-center min-h-[300px]">
             <CardContent className="p-8 text-center">
               <div className="w-full h-40 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-4xl text-text-muted">🎨</div>
+                
               </div>
               <h3 className="text-lg font-semibold text-text-primary">Identidade Visual</h3>
               <p className="text-text-secondary mt-2">Criamos marcas que conectam e convertem</p>
@@ -48,7 +48,7 @@ const ContactSection = () => {
           <Card className="bg-gradient-to-br from-muted/50 to-muted/30 border border-border/20 flex items-center justify-center min-h-[300px]">
             <CardContent className="p-8 text-center">
               <div className="w-full h-40 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-4xl text-text-muted">✨</div>
+                
               </div>
               <h3 className="text-lg font-semibold text-text-primary">Processo Criativo</h3>
               <p className="text-text-secondary mt-2">Metodologia própria para resultados únicos</p>
