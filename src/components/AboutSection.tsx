@@ -5,7 +5,16 @@ const AboutSection = () => {
   const { ref, isVisible } = useScrollReveal();
   
   return (
-    <section id="sobre" className="py-24 px-6" ref={ref}>
+    <section id="sobre" className="py-24 px-6 relative overflow-hidden" ref={ref}>
+      {/* Background gradient - rotated 180 degrees */}
+      <img 
+        src="/src/assets/about-background.png"
+        alt="Background gradient"
+        className="absolute inset-0 w-full h-full object-cover z-0 rotate-180"
+      />
+      
+      {/* Content overlay */}
+      <div className="relative z-10">
       <div className="container mx-auto max-w-6xl">
         <div className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-1000 ${
           isVisible 
@@ -42,6 +51,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
