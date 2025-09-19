@@ -39,7 +39,7 @@ const Footer = () => {
               className="text-text-muted hover:text-hero-primary transition-smooth"
               aria-label="Behance"
             >
-              <ExternalLink size={20} />
+              Behance
             </a>
           </div>
         </div>
