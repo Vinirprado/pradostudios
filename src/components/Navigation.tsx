@@ -17,7 +17,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/">
-              <img src={pradoStudioLogo} alt="Prado Studio Logo" className="h-10 hover:opacity-90 transition-smooth cursor-pointer" />
+              <img src={pradoStudioLogo} alt="Prado Studio Logo" className="h-14 hover:opacity-90 transition-smooth cursor-pointer" />
             </Link>
           </div>
           
