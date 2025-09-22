@@ -54,7 +54,15 @@ const PortfolioSection = () => {
               onClick={() => navigate(project.link)}
             >
               <div className="aspect-video overflow-hidden">
-                <img src={project.image} alt={`Projeto ${project.title} - Identidade Visual`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img 
+                  src={project.image} 
+                  alt={`Projeto ${project.title} - Identidade Visual`} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  width="528"
+                  height="297"
+                  decoding="async"
+                />
               </div>
               
               <div className="p-8">

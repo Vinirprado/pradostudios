@@ -11,6 +11,8 @@ const AboutSection = () => {
         src="/src/assets/about-background.png"
         alt="Background gradient"
         className="absolute inset-0 w-full h-full object-cover z-0 rotate-180 scale-x-[-1]"
+        loading="lazy"
+        decoding="async"
       />
       
       {/* Content overlay */}
@@ -47,6 +49,10 @@ const AboutSection = () => {
                 src={viniciusPortrait} 
                 alt="Vinicius Ramos - Designer de Identidade Visual"
                 className="w-full h-auto rounded-xl object-cover"
+                loading="lazy"
+                width="448"
+                height="597"
+                decoding="async"
               />
             </div>
           </div>
