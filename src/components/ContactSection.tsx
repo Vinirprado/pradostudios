@@ -69,7 +69,7 @@ const ContactSection = () => {
             size="lg"
           >
             <MessageCircle className="mr-2" size={24} />
-            Fale Comigo no WhatsApp
+            Começar meu projeto
           </Button>
         </div>
       </div>
