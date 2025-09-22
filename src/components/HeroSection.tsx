@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import heroWallpaper from '@/assets/hero-wallpaper.png';
 const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contato');
@@ -11,7 +12,7 @@ const HeroSection = () => {
   return <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
       {/* Wallpaper Background */}
       <img 
-        src="/src/assets/hero-wallpaper.png"
+        src={heroWallpaper}
         alt="Background gradient"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
