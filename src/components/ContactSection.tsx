@@ -10,7 +10,6 @@ const ContactSection = () => {
   const handleContact = () => {
     window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
   };
-
   const handleWhatsAppContact = () => {
     window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
   };
@@ -30,9 +29,9 @@ const ContactSection = () => {
           </Card>
 
           {/* Card 2 - Philosophy */}
-          <Card className="border border-border/20 flex items-center justify-center min-h-[300px] bg-stone-700">
+          <Card className="border border-border/20 flex items-center justify-center min-h-[300px] bg-rose-900">
             <CardContent className="p-8 text-center">
-              <p className="text-xl md:text-2xl text-text-primary font-medium leading-relaxed">
+              <p className="text-xl text-text-primary font-medium leading-relaxed md:text-4xl">
                 Design fala quando palavras não são suficientes. Quem investe em design, economiza explicações.
               </p>
             </CardContent>
@@ -63,11 +62,7 @@ const ContactSection = () => {
 
         {/* WhatsApp Contact Button */}
         <div className="text-center mt-16">
-          <Button 
-            onClick={handleWhatsAppContact}
-            className="bg-white text-green-600 hover:bg-green-50 border border-green-600 px-8 py-4 text-lg font-semibold rounded-2xl shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]"
-            size="lg"
-          >
+          <Button onClick={handleWhatsAppContact} className="bg-white text-green-600 hover:bg-green-50 border border-green-600 px-8 py-4 text-lg font-semibold rounded-2xl shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]" size="lg">
             <MessageCircle className="mr-2" size={24} />
             Começar meu projeto
           </Button>
