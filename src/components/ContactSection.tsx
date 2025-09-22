@@ -1,12 +1,17 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { MessageCircle } from 'lucide-react';
 const ContactSection = () => {
   const {
     ref,
     isVisible
   } = useScrollReveal();
   const handleContact = () => {
+    window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
+  };
+
+  const handleWhatsAppContact = () => {
     window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
   };
   return <section id="contato" className="py-24 px-6" ref={ref}>
@@ -54,6 +59,18 @@ const ContactSection = () => {
               <p className="text-text-secondary mt-2">Metodologia própria para resultados únicos</p>
             </CardContent>
           </Card>
+        </div>
+
+        {/* WhatsApp Contact Button */}
+        <div className="text-center mt-16">
+          <Button 
+            onClick={handleWhatsAppContact}
+            className="bg-white text-green-600 hover:bg-green-50 border border-green-600 px-8 py-4 text-lg font-semibold rounded-2xl shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]"
+            size="lg"
+          >
+            <MessageCircle className="mr-2" size={24} />
+            Fale Comigo no WhatsApp
+          </Button>
         </div>
       </div>
     </section>;

@@ -1,6 +1,4 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Button } from '@/components/ui/button';
-import { MessageCircle } from 'lucide-react';
 
 const ProcessSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -22,10 +20,6 @@ const ProcessSection = () => {
     title: "Entrega & Manual de Marca",
     description: "Aplicações claras e guia para consistência visual."
   }];
-
-  const handleWhatsAppContact = () => {
-    window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
-  };
   return <section id="processo" className="py-24 px-6 bg-surface-subtle" ref={ref}>
       <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
         isVisible 
@@ -58,18 +52,6 @@ const ProcessSection = () => {
                 </p>
               </div>
             </div>)}
-        </div>
-
-        {/* WhatsApp Contact Button */}
-        <div className="text-center mt-16">
-          <Button 
-            onClick={handleWhatsAppContact}
-            className="bg-white text-green-600 hover:bg-green-50 border border-green-600 px-8 py-4 text-lg font-semibold rounded-2xl shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]"
-            size="lg"
-          >
-            <MessageCircle className="mr-2" size={24} />
-            Fale Comigo no WhatsApp
-          </Button>
         </div>
       </div>
     </section>;
