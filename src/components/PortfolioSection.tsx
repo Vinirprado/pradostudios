@@ -62,6 +62,7 @@ const PortfolioSection = () => {
                   width="528"
                   height="297"
                   decoding="async"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 528px"
                 />
               </div>
               

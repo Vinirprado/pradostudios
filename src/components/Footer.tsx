@@ -5,7 +5,15 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-row justify-between items-center bg-neutral-50 rounded-3xl p-6">
           <div className="flex items-center space-x-4">
-            <img src={pradoStudioLogo} alt="Prado Studio Logo" className="h-12" />
+            <img 
+              src={pradoStudioLogo} 
+              alt="Prado Studio Logo" 
+              className="h-12"
+              width="85"
+              height="48"
+              decoding="async"
+              sizes="85px"
+            />
             <div className="text-text-muted">
               © 2024 Prado Studio. Todos os direitos reservados.
             </div>

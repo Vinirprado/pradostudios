@@ -53,6 +53,7 @@ const AboutSection = () => {
                 width="448"
                 height="597"
                 decoding="async"
+                sizes="(max-width: 1024px) 100vw, 448px"
               />
             </div>
           </div>

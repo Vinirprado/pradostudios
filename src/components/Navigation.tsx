@@ -24,6 +24,7 @@ const Navigation = () => {
                 width="100"
                 height="56"
                 decoding="async"
+                sizes="100px"
               />
             </Link>
           </div>
