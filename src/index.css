@@ -45,7 +45,7 @@ All colors MUST be HSL.
     --surface-subtle: 0 0% 6%;
     --text-primary: 0 0% 98%;
     --text-secondary: 0 0% 75%;
-    --text-muted: 0 0% 55%;
+    --text-muted: 0 0% 40%;
     
     /* Gradients */
     --gradient-subtle: linear-gradient(135deg, hsl(0 0% 6%), hsl(0 0% 4%));
