@@ -11,7 +11,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Critical font loading with improved performance -->
+    <!-- Critical styles loading optimization -->
+    <style>
+      /* Critical above-the-fold styles to prevent FOUC */
+      body { margin: 0; background-color: #0a0a0a; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
+      .min-h-screen { min-height: 100vh; }
+      nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
+    </style>
+    
+    <!-- Font loading with improved performance -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
     
