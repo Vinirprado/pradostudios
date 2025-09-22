@@ -10,7 +10,7 @@ const AboutSection = () => {
       <img 
         src="/src/assets/about-background.png"
         alt="Background gradient"
-        className="absolute inset-0 w-full h-full object-cover z-0 rotate-180"
+        className="absolute inset-0 w-full h-full object-cover z-0 rotate-180 scale-x-[-1]"
       />
       
       {/* Content overlay */}
