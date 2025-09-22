@@ -5,6 +5,10 @@ export const useScrollReveal = (threshold = 0.1, rootMargin = '0px') => {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const currentElement = ref.current;
+    
+    if (!currentElement) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -19,14 +23,10 @@ export const useScrollReveal = (threshold = 0.1, rootMargin = '0px') => {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(currentElement);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.disconnect();
     };
   }, [threshold, rootMargin]);
 
