@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, ExternalLink } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 import pradoStudioLogo from '@/assets/prado-studio-logo-color.png';
 const Footer = () => {
   return <footer className="py-12 px-6 border-t border-border/30">
