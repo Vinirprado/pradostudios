@@ -1,4 +1,5 @@
-import viniciusPortrait from '@/assets/vinicius-new-portrait.jpg';
+import viniciusPortrait from '@/assets/vinicius-portrait.jpg';
+import heroBackground from '@/assets/hero-wallpaper.png';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const AboutSection = () => {
@@ -8,7 +9,7 @@ const AboutSection = () => {
     <section id="sobre" className="py-24 px-6 relative overflow-hidden" ref={ref}>
       {/* Background gradient - rotated 180 degrees */}
       <img 
-        src="/src/assets/about-background.png"
+        src={heroBackground}
         alt="Background gradient"
         className="absolute inset-0 w-full h-full object-cover z-0 rotate-180 scale-x-[-1]"
         loading="lazy"
