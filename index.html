@@ -16,7 +16,69 @@
       /* Critical above-the-fold styles to prevent FOUC */
       body { margin: 0; background-color: #0a0a0a; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
       .min-h-screen { min-height: 100vh; }
-      nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
+      
+      /* Critical navigation styles */
+      nav { 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        z-index: 50; 
+        padding: 1rem 1.5rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+      }
+      
+      /* Critical hero section styles */
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 1.5rem 0;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #000, rgba(0,0,0,0.5), #0a0a0a);
+      }
+      
+      .hero-content {
+        text-align: center;
+        max-width: 64rem;
+        margin: 0 auto;
+        position: relative;
+        z-index: 20;
+      }
+      
+      .hero-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        line-height: 1;
+        color: #ffffff;
+        text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      }
+      
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+        max-width: 32rem;
+        margin-left: auto;
+        margin-right: auto;
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+      
+      .hero-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background-color: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
       
       /* Fix touch target size for Lovable badge close button */
       #lovable-badge-close {
@@ -27,6 +89,14 @@
         align-items: center !important;
         justify-content: center !important;
         box-sizing: border-box !important;
+      }
+      
+      @media (min-width: 768px) {
+        .hero-title { font-size: 4.5rem; }
+      }
+      
+      @media (min-width: 1024px) {
+        .hero-title { font-size: 6rem; }
       }
     </style>
     
