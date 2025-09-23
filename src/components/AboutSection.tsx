@@ -1,4 +1,4 @@
-import viniciusPortrait from '@/assets/vinicius-portrait.jpg';
+import viniciusPortrait from '@/assets/vinicius-new-portrait.jpg';
 import heroBackground from '@/assets/hero-wallpaper.png';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 const AboutSection = () => {
