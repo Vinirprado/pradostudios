@@ -119,7 +119,46 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/2NuUHnjEqMgAoIyN94A5DQXhQKw1/uploads/1758211679127-Icone logo 2 - Transparente.png">
-</head>
+    <script>
+      // Defer CSS loading to eliminate render-blocking
+      (function() {
+        // Function to defer a stylesheet
+        function deferCSS(link) {
+          if (link.rel === 'stylesheet' && link.href && link.href.includes('index-') && link.href.includes('.css')) {
+            link.media = 'print';
+            link.onload = function() {
+              this.media = 'all';
+              this.onload = null;
+            };
+          }
+        }
+        
+        // Handle existing links
+        var links = document.getElementsByTagName('link');
+        for (var i = 0; i < links.length; i++) {
+          deferCSS(links[i]);
+        }
+        
+        // Watch for dynamically added stylesheets
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.nodeType === 1 && node.tagName === 'LINK') {
+                deferCSS(node);
+              }
+            });
+          });
+        });
+        
+        observer.observe(document.head, { childList: true });
+        
+        // Clean up observer after page load
+        window.addEventListener('load', function() {
+          observer.disconnect();
+        });
+      })();
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
