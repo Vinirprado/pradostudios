@@ -19,7 +19,7 @@ const ContactSection = () => {
           {/* Card 1 - Main CTA */}
           <Card className="bg-hero-primary text-white border-0 flex items-center justify-center aspect-square">
             <CardContent className="p-8 text-center">
-              <h2 className="text-xl font-display font-bold mb-6 leading-tight text-gray-950 md:text-3xl">
+              <h2 className="text-xl font-display font-bold mb-6 leading-tight text-gray-950 md:text-6xl">
                 Pronto para transformar sua marca em uma identidade inesquecível?
               </h2>
               <Button variant="outline" onClick={handleContact} className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-hero-primary transition-smooth">
@@ -53,7 +53,7 @@ const ContactSection = () => {
           {/* Card 4 - Philosophy */}
           <Card className="border border-border/20 flex items-center justify-center aspect-square bg-rose-900">
             <CardContent className="p-8 text-center">
-              <p className="text-base text-text-primary font-medium leading-relaxed md:text-xl">
+              <p className="text-base text-text-primary font-medium leading-relaxed md:text-4xl">
                 Design fala quando palavras não são suficientes. Quem investe em design, economiza explicações.
               </p>
             </CardContent>
