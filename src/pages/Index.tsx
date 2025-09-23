@@ -10,7 +10,7 @@ import BackToTop from '@/components/BackToTop';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen">
       <Navigation />
       
       <main>

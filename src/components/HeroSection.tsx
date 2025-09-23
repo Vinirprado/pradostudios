@@ -9,7 +9,7 @@ const HeroSection = () => {
       });
     }
   };
-  return <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+  return <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden bg-gradient-to-b from-black via-black/50 to-background">
       {/* Wallpaper Background */}
       <img 
         src={heroWallpaper}

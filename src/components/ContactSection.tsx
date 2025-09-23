@@ -13,7 +13,7 @@ const ContactSection = () => {
   const handleWhatsAppContact = () => {
     window.open('https://wa.me/5511993912083?text=Olá! Gostaria de saber mais sobre seus serviços de identidade visual.', '_blank');
   };
-  return <section id="contato" className="py-24 px-6" ref={ref}>
+  return <section id="contato" className="py-24 px-6 bg-gradient-to-b from-black/30 via-background to-background" ref={ref}>
       <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-auto">
           {/* Card 1 - Main CTA */}
