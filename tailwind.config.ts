@@ -79,6 +79,7 @@ export default {
       backgroundImage: {
         'gradient-subtle': 'var(--gradient-subtle)',
         'gradient-card': 'var(--gradient-card)',
+        'gradient-numbers': 'var(--gradient-numbers)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',

@@ -39,7 +39,7 @@ const ProcessSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => <div key={index} className="text-center group">
               <div className="bg-gradient-card rounded-2xl p-8 shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02] mb-6">
-                <div className="text-4xl font-display font-bold text-hero-primary mb-4 opacity-50">
+                <div className="text-4xl font-display font-bold mb-4 bg-gradient-numbers bg-clip-text text-transparent">
                   {step.number}
                 </div>
                 
