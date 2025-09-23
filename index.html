@@ -17,6 +17,17 @@
       body { margin: 0; background-color: #0a0a0a; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
       .min-h-screen { min-height: 100vh; }
       nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
+      
+      /* Fix touch target size for Lovable badge close button */
+      #lovable-badge-close {
+        min-width: 24px !important;
+        min-height: 24px !important;
+        padding: 4px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
     </style>
     
     <!-- Font loading with improved performance -->
