@@ -12,20 +12,12 @@ const Navigation = () => {
     }
     setIsOpen(false);
   };
-  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 rounded-3xl">
       <div className="container mx-auto px-6 py-4 rounded-sm bg-[#fcfcfc]/0">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/">
-              <img 
-                src={pradoStudioLogo} 
-                alt="Prado Studio Logo" 
-                className="h-14 hover:opacity-90 transition-smooth cursor-pointer"
-                width="100"
-                height="56"
-                decoding="async"
-                sizes="100px"
-              />
+              <img src={pradoStudioLogo} alt="Prado Studio Logo" className="h-14 hover:opacity-90 transition-smooth cursor-pointer" width="100" height="56" decoding="async" sizes="100px" />
             </Link>
           </div>
           
@@ -39,11 +31,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-hero-primary" 
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Menu de navegação"
-          >
+          <button className="md:hidden text-hero-primary" onClick={() => setIsOpen(!isOpen)} aria-label="Menu de navegação">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
