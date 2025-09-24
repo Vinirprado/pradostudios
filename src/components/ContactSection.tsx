@@ -30,24 +30,12 @@ const ContactSection = () => {
 
           {/* Card 2 - Process Image Placeholder */}
           <Card className="bg-gradient-to-br from-muted/50 to-muted/30 border border-border/20 flex items-center justify-center aspect-square">
-            <CardContent className="p-8 text-center">
-              <div className="w-full h-24 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
-                
-              </div>
-              <h3 className="text-lg font-semibold text-text-primary">Processo Criativo</h3>
-              <p className="text-text-secondary mt-2">Metodologia própria para resultados únicos</p>
-            </CardContent>
+            
           </Card>
 
           {/* Card 3 - Services Image Placeholder */}
           <Card className="bg-gradient-to-br from-card to-card/80 border border-border/20 flex items-center justify-center aspect-square">
-            <CardContent className="p-8 text-center">
-              <div className="w-full h-24 bg-gradient-subtle rounded-lg mb-4 flex items-center justify-center">
-                
-              </div>
-              <h3 className="text-lg font-semibold text-text-primary">Identidade Visual</h3>
-              <p className="text-text-secondary mt-2">Criamos marcas que conectam e convertem</p>
-            </CardContent>
+            
           </Card>
 
           {/* Card 4 - Philosophy */}
