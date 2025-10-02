@@ -66,7 +66,7 @@ const HeroSection = () => {
                     <img
                       src={image}
                       alt={`Showcase de design ${index + 1}`}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover rounded-2xl"
                     />
                   </div>
                 ))}
