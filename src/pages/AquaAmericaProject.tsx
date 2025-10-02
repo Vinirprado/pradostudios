@@ -5,7 +5,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import aquaAmerica from '@/assets/aqua-america.png';
-import portfolio4 from '@/assets/portfolio-4.jpg';
+import aquaBottles from '@/assets/aqua-bottles.png';
+import aquaBusinessCards from '@/assets/aqua-business-cards.png';
+import aquaVehicles from '@/assets/aqua-vehicles.png';
+import aquaLogoConcept from '@/assets/aqua-logo-concept.png';
+import aquaBranding from '@/assets/aqua-branding.png';
 
 const AquaAmericaProject = () => {
   const navigate = useNavigate();
@@ -140,48 +144,54 @@ const AquaAmericaProject = () => {
 
         {/* Visual Elements */}
         <section className="py-24 px-6 bg-secondary/5" data-section="2">
-          <div className={`container mx-auto max-w-6xl ${getSectionClasses(2)}`}>
+          <div className={`container mx-auto max-w-7xl ${getSectionClasses(2)}`}>
             <h2 className="text-4xl font-display font-bold text-hero-primary mb-16 text-center">
               Design Natural
             </h2>
             
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <img 
-                  src={portfolio4} 
-                  alt="Design natural da marca Aqua America"
-                  className="w-full rounded-2xl shadow-elegant"
-                />
-              </div>
-              
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Formas Orgânicas
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Elementos visuais inspirados na fluidez e movimento natural da água, criando harmonia visual.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Paleta Aquática
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Tons que remetem à pureza da água cristalina e à serenidade dos ambientes naturais.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Sustentabilidade
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Design que reflete o compromisso com práticas sustentáveis e responsabilidade ambiental.
-                  </p>
-                </div>
-              </div>
+            {/* Bottles Design */}
+            <div className="mb-12">
+              <img 
+                src={aquaBottles} 
+                alt="Design de garrafas Aqua America"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Business Cards */}
+            <div className="mb-12">
+              <img 
+                src={aquaBusinessCards} 
+                alt="Cartões de visita Aqua America"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Vehicle Branding */}
+            <div className="mb-12">
+              <img 
+                src={aquaVehicles} 
+                alt="Frota de veículos Aqua America"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Logo Concept */}
+            <div className="mb-12">
+              <img 
+                src={aquaLogoConcept} 
+                alt="Conceito do logo Aqua America"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Final Branding */}
+            <div>
+              <img 
+                src={aquaBranding} 
+                alt="Branding completo Aqua America"
+                className="w-full rounded-2xl shadow-elegant"
+              />
             </div>
           </div>
         </section>
