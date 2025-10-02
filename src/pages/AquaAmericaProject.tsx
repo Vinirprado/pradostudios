@@ -209,15 +209,15 @@ const AquaAmericaProject = () => {
               
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">300%</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">300%</div>
                   <p className="text-text-secondary">Crescimento nas vendas</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">5</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">5</div>
                   <p className="text-text-secondary">Semanas de desenvolvimento</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">25+</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">25+</div>
                   <p className="text-text-secondary">Aplicações da marca</p>
                 </div>
               </div>

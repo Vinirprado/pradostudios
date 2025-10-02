@@ -219,15 +219,15 @@ const ApolocredProject = () => {
               
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">250%</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">250%</div>
                   <p className="text-text-secondary">Aumento na captação</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">4</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">4</div>
                   <p className="text-text-secondary">Semanas de projeto</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">20+</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">20+</div>
                   <p className="text-text-secondary">Materiais desenvolvidos</p>
                 </div>
               </div>

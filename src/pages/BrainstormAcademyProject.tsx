@@ -209,15 +209,15 @@ const BrainstormAcademyProject = () => {
               
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">85%</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">85%</div>
                   <p className="text-text-secondary">Aumento no engajamento</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">6</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">6</div>
                   <p className="text-text-secondary">Semanas de redesign</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">50+</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">50+</div>
                   <p className="text-text-secondary">Materiais renovados</p>
                 </div>
               </div>
