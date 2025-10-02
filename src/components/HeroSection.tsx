@@ -32,10 +32,28 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center bg-background px-6 py-20">
       <div className="container mx-auto max-w-7xl">
         {/* Rounded Rectangle Container */}
-        <div className="relative bg-muted/30 rounded-[3rem] p-12 md:p-16 lg:p-20 overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
-            {/* Left Content - Text */}
-            <div className="space-y-8">
+        <div className="relative bg-muted/30 rounded-[3rem] overflow-hidden min-h-[600px] md:min-h-[700px]">
+          {/* Background Image Carousel - Full Container */}
+          <div className="absolute inset-0">
+            {heroImages.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`Showcase de design ${index + 1}`}
+                  className="w-full h-full object-cover rounded-[3rem]"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Content Overlay */}
+          <div className="relative z-10 p-12 md:p-16 lg:p-20">
+            <div className="max-w-2xl space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground">
                 Design fala quando palavras não são suficientes.
               </h1>
@@ -51,28 +69,6 @@ const HeroSection = () => {
               >
                 Como trabalhamos?
               </Button>
-            </div>
-
-            {/* Right Content - Image Carousel */}
-            <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
-              <div className="relative w-full h-full perspective-1000">
-                {heroImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 transition-opacity duration-1000 ${
-                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
-                  >
-                    <div className="relative w-full h-full transform hover:scale-[1.02] transition-transform duration-300">
-                      <img
-                        src={image}
-                        alt={`Showcase de design ${index + 1}`}
-                        className="w-full h-full object-contain drop-shadow-2xl"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
