@@ -5,7 +5,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import brainstormAcademy from '@/assets/brainstorm-academy.png';
-import portfolio3 from '@/assets/portfolio-3.jpg';
+import brainstormProducts from '@/assets/brainstorm-products.png';
+import brainstormOutdoor from '@/assets/brainstorm-outdoor.png';
+import brainstormColors from '@/assets/brainstorm-colors.png';
+import brainstormLogoConcept from '@/assets/brainstorm-logo-concept.png';
+import brainstormMerch from '@/assets/brainstorm-merch.png';
 
 const BrainstormAcademyProject = () => {
   const navigate = useNavigate();
@@ -140,48 +144,54 @@ const BrainstormAcademyProject = () => {
 
         {/* Visual Elements */}
         <section className="py-24 px-6 bg-secondary/5" data-section="2">
-          <div className={`container mx-auto max-w-6xl ${getSectionClasses(2)}`}>
+          <div className={`container mx-auto max-w-7xl ${getSectionClasses(2)}`}>
             <h2 className="text-4xl font-display font-bold text-hero-primary mb-16 text-center">
               Nova Identidade
             </h2>
             
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <img 
-                  src={portfolio3} 
-                  alt="Nova identidade visual da Brainstorm Academy"
-                  className="w-full rounded-2xl shadow-elegant"
-                />
-              </div>
-              
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Design Limpo
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Abandonamos elementos desnecessários para criar uma comunicação mais direta e impactante.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Paleta Inspiradora
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Cores que estimulam a criatividade e o aprendizado, criando um ambiente visual motivador.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Sistema Flexível
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Identidade adaptável que funciona tanto no ambiente digital quanto nos materiais físicos.
-                  </p>
-                </div>
-              </div>
+            {/* Brand Products */}
+            <div className="mb-12">
+              <img 
+                src={brainstormProducts} 
+                alt="Produtos e materiais Brainstorm Academy"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Outdoor Campaign */}
+            <div className="mb-12">
+              <img 
+                src={brainstormOutdoor} 
+                alt="Campanhas outdoor Brainstorm Academy"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Color Palette */}
+            <div className="mb-12">
+              <img 
+                src={brainstormColors} 
+                alt="Paleta de cores Brainstorm Academy"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Logo Concept */}
+            <div className="mb-12">
+              <img 
+                src={brainstormLogoConcept} 
+                alt="Conceito do logo Brainstorm Academy"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Merchandise */}
+            <div>
+              <img 
+                src={brainstormMerch} 
+                alt="Merchandise e brindes Brainstorm Academy"
+                className="w-full rounded-2xl shadow-elegant"
+              />
             </div>
           </div>
         </section>
