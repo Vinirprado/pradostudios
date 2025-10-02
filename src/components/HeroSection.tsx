@@ -54,7 +54,7 @@ const HeroSection = () => {
           {/* Content Overlay */}
           <div className="relative z-10 p-12 md:p-16 lg:p-20">
             <div className="max-w-2xl space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground drop-shadow-md">
                 Design fala quando palavras não são suficientes.
               </h1>
               
