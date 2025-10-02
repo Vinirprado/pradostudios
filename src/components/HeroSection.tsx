@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import heroImage1 from '@/assets/hero-image-1.jpg';
-import heroImage2 from '@/assets/hero-image-2.jpg';
-import heroImage3 from '@/assets/hero-image-3.jpg';
-import heroImage4 from '@/assets/hero-image-4.jpg';
+import heroImage1 from '@/assets/hero-carousel-1.png';
+import heroImage2 from '@/assets/hero-carousel-2.png';
+import heroImage3 from '@/assets/hero-carousel-3.png';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
+  const heroImages = [heroImage1, heroImage2, heroImage3];
 
   useEffect(() => {
     const interval = setInterval(() => {
