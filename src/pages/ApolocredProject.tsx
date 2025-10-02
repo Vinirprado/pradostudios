@@ -5,7 +5,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import apolocred from '@/assets/apolocred.png';
-import portfolio2 from '@/assets/portfolio-2.jpg';
+import apolocredBillboard from '@/assets/apolocred-billboard.png';
+import apolocredProducts from '@/assets/apolocred-products.png';
+import apolocredSocial from '@/assets/apolocred-social.png';
+import apolocredApparel from '@/assets/apolocred-apparel.png';
+import apolocredTypography from '@/assets/apolocred-typography.png';
+import apolocredBrandConcept from '@/assets/apolocred-brand-concept.png';
 
 const ApolocredProject = () => {
   const navigate = useNavigate();
@@ -140,48 +145,63 @@ const ApolocredProject = () => {
 
         {/* Visual Elements */}
         <section className="py-24 px-6 bg-secondary/5" data-section="2">
-          <div className={`container mx-auto max-w-6xl ${getSectionClasses(2)}`}>
+          <div className={`container mx-auto max-w-7xl ${getSectionClasses(2)}`}>
             <h2 className="text-4xl font-display font-bold text-hero-primary mb-16 text-center">
               Identidade Visual
             </h2>
             
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <img 
-                  src={portfolio2} 
-                  alt="Elementos visuais da marca Apolocred"
-                  className="w-full rounded-2xl shadow-elegant"
-                />
-              </div>
-              
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Logomarca
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Design que combina modernidade e confiabilidade, transmitindo a seriedade necessária para o setor financeiro.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Cores Corporativas
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Paleta que inspira confiança e profissionalismo, utilizando tons que remetem à estabilidade e crescimento.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Aplicações
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Sistema de identidade flexível que funciona em todos os pontos de contato com o cliente.
-                  </p>
-                </div>
-              </div>
+            {/* Billboard Campaign */}
+            <div className="mb-12">
+              <img 
+                src={apolocredBillboard} 
+                alt="Campanha outdoor Apolocred"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Brand Products */}
+            <div className="mb-12">
+              <img 
+                src={apolocredProducts} 
+                alt="Produtos e materiais corporativos Apolocred"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Social Media */}
+            <div className="mb-12">
+              <img 
+                src={apolocredSocial} 
+                alt="Redes sociais e comunicação digital Apolocred"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Apparel and Branding */}
+            <div className="mb-12">
+              <img 
+                src={apolocredApparel} 
+                alt="Material corporativo e uniformes Apolocred"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Typography */}
+            <div className="mb-12">
+              <img 
+                src={apolocredTypography} 
+                alt="Tipografia da marca Apolocred"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Brand Concept */}
+            <div>
+              <img 
+                src={apolocredBrandConcept} 
+                alt="Conceito e elementos da marca Apolocred"
+                className="w-full rounded-2xl shadow-elegant"
+              />
             </div>
           </div>
         </section>
