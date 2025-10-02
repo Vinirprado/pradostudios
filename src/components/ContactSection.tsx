@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { MessageCircle } from 'lucide-react';
 import drawingTablet from '@/assets/drawing-tablet.webp';
+import workspace from '@/assets/workspace.png';
 const ContactSection = () => {
   const {
     ref,
@@ -39,8 +40,12 @@ const ContactSection = () => {
           </Card>
 
           {/* Card 3 - Services Image Placeholder */}
-          <Card className="bg-gradient-to-br from-card to-card/80 border border-border/20 flex items-center justify-center aspect-square">
-            
+          <Card className="bg-gradient-to-br from-card to-card/80 border border-border/20 flex items-center justify-center aspect-square overflow-hidden">
+            <img 
+              src={workspace} 
+              alt="Workspace criativo" 
+              className="w-full h-full object-cover"
+            />
           </Card>
 
           {/* Card 4 - Philosophy */}
