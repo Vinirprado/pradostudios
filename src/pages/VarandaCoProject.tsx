@@ -5,7 +5,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import varandaCo from '@/assets/varanda-co.png';
-import portfolio1 from '@/assets/portfolio-1.jpg';
+import varandaDetails1 from '@/assets/varanda-details-1.png';
+import varandaDetails2 from '@/assets/varanda-details-2.png';
+import varandaDetails3 from '@/assets/varanda-details-3.png';
+import varandaTypography from '@/assets/varanda-typography.png';
 
 const VarandaCoProject = () => {
   const navigate = useNavigate();
@@ -140,48 +143,45 @@ const VarandaCoProject = () => {
 
         {/* Visual Elements */}
         <section className="py-24 px-6 bg-secondary/5" data-section="2">
-          <div className={`container mx-auto max-w-6xl ${getSectionClasses(2)}`}>
+          <div className={`container mx-auto max-w-7xl ${getSectionClasses(2)}`}>
             <h2 className="text-4xl font-display font-bold text-hero-primary mb-16 text-center">
               Elementos Visuais
             </h2>
             
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <img 
-                  src={portfolio1} 
-                  alt="Elementos visuais da marca Varanda & Co."
-                  className="w-full rounded-2xl shadow-elegant"
-                />
-              </div>
-              
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Tipografia
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Escolha tipográfica que combina elegância e legibilidade, refletindo o equilíbrio entre sofisticação e acessibilidade da marca.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Paleta de Cores
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Tons terrosos e aconchegantes que remetem ao café e criam uma atmosfera calorosa e convidativa.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
-                    Iconografia
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Elementos gráficos minimalistas que complementam a identidade sem competir com o protagonismo do produto.
-                  </p>
-                </div>
-              </div>
+            {/* Main Product Showcase */}
+            <div className="mb-12">
+              <img 
+                src={varandaDetails1} 
+                alt="Embalagem e produtos Varanda & Co."
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Storefront and Products Grid */}
+            <div className="mb-12">
+              <img 
+                src={varandaDetails2} 
+                alt="Fachada da loja e produtos Varanda & Co."
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Details Grid */}
+            <div className="mb-12">
+              <img 
+                src={varandaDetails3} 
+                alt="Detalhes visuais e aplicações da marca"
+                className="w-full rounded-2xl shadow-elegant"
+              />
+            </div>
+
+            {/* Typography Section */}
+            <div>
+              <img 
+                src={varandaTypography} 
+                alt="Tipografia e elementos da marca Varanda & Co."
+                className="w-full rounded-2xl shadow-elegant"
+              />
             </div>
           </div>
         </section>
