@@ -32,56 +32,63 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background px-6 py-20">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content - Text */}
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-tight text-foreground">
-              Design fala quando palavras não são suficientes.
-            </h1>
-            
-            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
-              As marcas que mais crescem são aquelas que investem em design, especialmente na identidade visual.
-            </p>
+        {/* Rounded Rectangle Container */}
+        <div className="relative bg-muted/30 rounded-[3rem] p-12 md:p-16 lg:p-20 overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+            {/* Left Content - Text */}
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground">
+                Design fala quando palavras não são suficientes.
+              </h1>
+              
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-md">
+                As marcas que mais crescem são aquelas que investem em design, especialmente na identidade visual.
+              </p>
 
-            <Button 
-              variant="outline" 
-              onClick={scrollToContact} 
-              className="text-base md:text-lg px-8 py-6 rounded-full border-2 hover:bg-foreground hover:text-background transition-all"
-            >
-              Como trabalhamos?
-            </Button>
+              <Button 
+                variant="outline" 
+                onClick={scrollToContact} 
+                className="text-base px-8 py-6 rounded-full border-2 border-foreground hover:bg-foreground hover:text-background transition-all"
+              >
+                Como trabalhamos?
+              </Button>
+            </div>
+
+            {/* Right Content - Image Carousel */}
+            <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
+              <div className="relative w-full h-full">
+                {heroImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-1000 ${
+                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  >
+                    <img
+                      src={image}
+                      alt={`Showcase de design ${index + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Right Content - Image Carousel */}
-          <div className="relative h-[500px] lg:h-[600px]">
-            <div className="relative h-full rounded-3xl overflow-hidden shadow-elevated">
-              {heroImages.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Showcase de design ${index + 1}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Image Indicators */}
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {heroImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentImageIndex 
-                      ? 'bg-foreground w-8' 
-                      : 'bg-muted-foreground/30 w-2'
-                  }`}
-                  aria-label={`Ver imagem ${index + 1}`}
-                />
-              ))}
-            </div>
+          {/* Image Indicators */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex 
+                    ? 'bg-foreground w-8' 
+                    : 'bg-foreground/30 w-2'
+                }`}
+                aria-label={`Ver imagem ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
