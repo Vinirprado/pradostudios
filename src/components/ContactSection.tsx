@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { MessageCircle } from 'lucide-react';
+import drawingTablet from '@/assets/drawing-tablet.webp';
 const ContactSection = () => {
   const {
     ref,
@@ -29,8 +30,12 @@ const ContactSection = () => {
           </Card>
 
           {/* Card 2 - Process Image Placeholder */}
-          <Card className="bg-gradient-to-br from-muted/50 to-muted/30 border border-border/20 flex items-center justify-center aspect-square">
-            
+          <Card className="bg-gradient-to-br from-muted/50 to-muted/30 border border-border/20 flex items-center justify-center aspect-square overflow-hidden">
+            <img 
+              src={drawingTablet} 
+              alt="Mesa digitalizadora" 
+              className="w-full h-full object-cover"
+            />
           </Card>
 
           {/* Card 3 - Services Image Placeholder */}
