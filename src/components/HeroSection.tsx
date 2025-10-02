@@ -55,7 +55,7 @@ const HeroSection = () => {
 
             {/* Right Content - Image Carousel */}
             <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full perspective-1000">
                 {heroImages.map((image, index) => (
                   <div
                     key={index}
@@ -63,11 +63,13 @@ const HeroSection = () => {
                       index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                     }`}
                   >
-                    <img
-                      src={image}
-                      alt={`Showcase de design ${index + 1}`}
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
+                    <div className="relative w-full h-full transform hover:scale-[1.02] transition-transform duration-300">
+                      <img
+                        src={image}
+                        alt={`Showcase de design ${index + 1}`}
+                        className="w-full h-full object-contain drop-shadow-2xl"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
