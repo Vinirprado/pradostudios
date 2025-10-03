@@ -16,13 +16,14 @@ const ServicesSection = () => {
     title: "Consultoria Visual",
     description: "Análise e orientação para melhorar a presença visual da sua marca."
   }];
+  
   return <section id="servicos" className="py-24 px-6 bg-surface-subtle" ref={ref}>
-      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-10'
-      }`}>
-        <div className="text-center mb-16">
+      <div className="container mx-auto max-w-6xl">
+        <div className={`text-center mb-16 transition-all duration-1000 ${
+          isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">Serviços</h2>
           
           <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed md:text-lg">
@@ -31,14 +32,26 @@ const ServicesSection = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {services.map((service, index) => <div key={index} className="bg-gradient-card rounded-2xl p-8 shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]">
+          {services.map((service, index) => (
+            <div 
+              key={index} 
+              className={`bg-gradient-card rounded-2xl p-8 shadow-soft hover:shadow-elevated hover:scale-[1.02] transition-all duration-700 ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-20'
+              }`}
+              style={{
+                transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
+              }}
+            >
               <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
                 {service.title}
               </h3>
               <p className="text-text-secondary leading-relaxed">
                 {service.description}
               </p>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
     </section>;
