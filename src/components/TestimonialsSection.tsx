@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
   return (
     <section className="py-24 px-6 bg-background relative overflow-hidden">
       {/* Decorative sidebar with gradient */}
-      <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-[hsl(300_100%_85%)] via-[hsl(280_100%_85%)] to-[hsl(200_100%_85%)]" />
+      <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-[hsl(300_100%_70%)] via-[hsl(280_100%_90%)] to-[hsl(200_100%_70%)]" />
       
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
