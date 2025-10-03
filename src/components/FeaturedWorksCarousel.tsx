@@ -112,9 +112,7 @@ const FeaturedWorksCarousel = () => {
                     <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 h-[400px] flex flex-col shadow-lg hover:shadow-xl transition-all duration-500 cursor-grab active:cursor-grabbing border border-[#d0d0d0]">
                       {/* Badge */}
                       <div className="inline-flex items-center gap-2 bg-white border border-[#d0d0d0] px-5 py-2 rounded-full w-fit mb-8">
-                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="#ff0080">
-                          <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                        </svg>
+                        <Check className="w-4 h-4 text-[#ff0080]" />
                         <span className="font-semibold text-black text-sm">{work.etapa}</span>
                       </div>
                       
