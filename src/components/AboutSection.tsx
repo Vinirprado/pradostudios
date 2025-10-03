@@ -8,7 +8,7 @@ const AboutSection = () => {
   } = useScrollReveal();
   return <section id="sobre" className="py-24 px-6 relative overflow-hidden" ref={ref}>
       {/* Background image */}
-      <img src={aboutBackground} alt="Background gradient" className="absolute inset-0 w-full h-full object-cover object-center z-0" loading="lazy" decoding="async" />
+      <img src={aboutBackground} alt="Background gradient" className="absolute inset-0 w-full h-full object-cover object-center z-0 scale-110" loading="lazy" decoding="async" />
       
       {/* Gradient overlays for fade effect */}
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent z-[1]" />
