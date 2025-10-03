@@ -1,7 +1,8 @@
-import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useEffect, useRef, useState } from 'react';
 
 const ServicesSection = () => {
-  const { ref, isVisible } = useScrollReveal();
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false, false]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   
   const services = [{
     title: "Identidade Visual Completa",
@@ -16,14 +17,40 @@ const ServicesSection = () => {
     title: "Consultoria Visual",
     description: "Análise e orientação para melhorar a presença visual da sua marca."
   }];
+
+  useEffect(() => {
+    const observers = cardRefs.current.map((card, index) => {
+      if (!card) return null;
+      
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setVisibleCards(prev => {
+              const newState = [...prev];
+              newState[index] = true;
+              return newState;
+            });
+            observer.unobserve(entry.target);
+          }
+        },
+        {
+          threshold: 0.2,
+          rootMargin: '0px'
+        }
+      );
+      
+      observer.observe(card);
+      return observer;
+    });
+    
+    return () => {
+      observers.forEach(observer => observer?.disconnect());
+    };
+  }, []);
   
-  return <section id="servicos" className="py-24 px-6 bg-surface-subtle" ref={ref}>
+  return <section id="servicos" className="py-24 px-6 bg-surface-subtle">
       <div className="container mx-auto max-w-6xl">
-        <div className={`text-center mb-16 transition-all duration-1000 ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-10'
-        }`}>
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">Serviços</h2>
           
           <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed md:text-lg">
@@ -34,15 +61,13 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div 
-              key={index} 
+              key={index}
+              ref={el => cardRefs.current[index] = el}
               className={`bg-gradient-card rounded-2xl p-8 shadow-soft hover:shadow-elevated hover:scale-[1.02] transition-all duration-700 ${
-                isVisible 
+                visibleCards[index]
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
               }`}
-              style={{
-                transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
-              }}
             >
               <h3 className="text-2xl font-display font-semibold text-hero-primary mb-4">
                 {service.title}
