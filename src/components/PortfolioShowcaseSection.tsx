@@ -1,18 +1,20 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import portfolio1 from '@/assets/portfolio-1.jpg';
-import portfolio2 from '@/assets/portfolio-2.jpg';
-import portfolio3 from '@/assets/portfolio-3.jpg';
-import portfolio4 from '@/assets/portfolio-4.jpg';
+import portfolioApolocred from '@/assets/portfolio-apolocred.png';
+import portfolioComape from '@/assets/portfolio-comape.png';
+import portfolioKikibank from '@/assets/portfolio-kikibank.png';
+import portfolioVaranda from '@/assets/portfolio-varanda.png';
+import portfolioFatec from '@/assets/portfolio-fatec.jpg';
 import behanceLogo from '@/assets/behance-logo.png';
 
 const PortfolioShowcaseSection = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
 
   const portfolioImages = [
-    portfolio1,
-    portfolio2,
-    portfolio3,
-    portfolio4,
+    portfolioApolocred,
+    portfolioComape,
+    portfolioKikibank,
+    portfolioVaranda,
+    portfolioFatec,
   ];
 
   return (
