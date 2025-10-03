@@ -12,7 +12,7 @@ const Navigation = () => {
     }
     setIsOpen(false);
   };
-  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 rounded-3xl">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/40 backdrop-blur-xl border-b border-border/30 rounded-3xl">
       <div className="container mx-auto px-6 py-4 rounded-sm bg-[#fcfcfc]/0">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
