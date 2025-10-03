@@ -21,31 +21,21 @@ const ContactSection = () => {
           {/* Card 1 - Main CTA */}
           <Card className="bg-hero-primary text-white border-0 flex items-center justify-center aspect-square h-[400px]">
             <CardContent className="p-8 text-center">
-              <h2 className="text-xl font-display font-bold mb-6 leading-tight text-gray-950 md:text-6xl">
+              <h2 className="text-xl font-display font-bold mb-6 leading-tight text-gray-950 my-0 md:text-5xl">
                 Pronto para transformar sua marca em uma identidade inesquecível?
               </h2>
-              <Button variant="outline" onClick={handleContact} className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-hero-primary transition-smooth">
-                Fale comigo
-              </Button>
+              
             </CardContent>
           </Card>
 
           {/* Card 2 - Process Image Placeholder */}
           <Card className="bg-gradient-to-br from-muted/50 to-muted/30 border border-border/20 flex items-center justify-center aspect-square overflow-hidden h-[400px]">
-            <img 
-              src={drawingTablet} 
-              alt="Mesa digitalizadora" 
-              className="w-full h-full object-cover"
-            />
+            <img src={drawingTablet} alt="Mesa digitalizadora" className="w-full h-full object-cover" />
           </Card>
 
           {/* Card 3 - Services Image Placeholder */}
           <Card className="bg-gradient-to-br from-card to-card/80 border border-border/20 flex items-center justify-center aspect-square overflow-hidden h-[400px]">
-            <img 
-              src={workspace} 
-              alt="Workspace criativo" 
-              className="w-full h-full object-cover"
-            />
+            <img src={workspace} alt="Workspace criativo" className="w-full h-full object-cover" />
           </Card>
 
           {/* Card 4 - Philosophy */}
