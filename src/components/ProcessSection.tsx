@@ -1,4 +1,5 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import processBackground from '@/assets/process-background.png';
 
 const ProcessSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -20,7 +21,21 @@ const ProcessSection = () => {
     title: "Entrega & Manual de Marca",
     description: "Aplicações claras e guia para consistência visual."
   }];
-  return <section id="processo" className="py-24 px-6 bg-surface-subtle" ref={ref}>
+  return <section id="processo" className="relative py-24 px-6 overflow-hidden" ref={ref}>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${processBackground})` }}
+      />
+      
+      {/* Top Gradient Overlay */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent z-10" />
+      
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+      
+      {/* Content */}
+      <div className="relative z-20">
       <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
         isVisible 
           ? 'opacity-100 translate-y-0' 
@@ -53,6 +68,7 @@ const ProcessSection = () => {
               </div>
             </div>)}
         </div>
+      </div>
       </div>
     </section>;
 };
