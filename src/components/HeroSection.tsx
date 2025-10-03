@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import heroImage1 from '@/assets/hero-carousel-1.png';
 import heroImage2 from '@/assets/hero-carousel-2.png';
 import heroImage3 from '@/assets/hero-carousel-3.png';
+import logo from '@/assets/prado-studio-logo-white.png';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -51,25 +52,38 @@ const HeroSection = () => {
             ))}
           </div>
 
-          {/* Content Overlay */}
-          <div className="relative z-10 p-12 md:p-16 lg:p-20">
-            <div className="max-w-2xl space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground drop-shadow-md">
-                Design fala quando palavras não são suficientes.
-              </h1>
-              
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-md">
-                As marcas que mais crescem são aquelas que investem em design, especialmente na identidade visual.
-              </p>
+          {/* Content Overlay - Centered */}
+          <div className="relative z-10 flex flex-col items-center justify-center min-h-[600px] md:min-h-[700px] px-6 md:px-12 text-center">
+            {/* Logo */}
+            <img 
+              src={logo} 
+              alt="Prado Studio" 
+              className="w-16 h-16 md:w-20 md:h-20 mb-8 md:mb-12 animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]"
+            />
+            
+            {/* Main Heading with staggered animation */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground drop-shadow-lg max-w-5xl space-y-2">
+              <span className="block animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
+                Design fala quando
+              </span>
+              <span className="block animate-fade-in opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
+                palavras <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600">não são</span>
+              </span>
+              <span className="block animate-fade-in opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600">suficientes.</span>
+              </span>
+            </h1>
+            
+            <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed max-w-3xl mt-8 md:mt-10 animate-fade-in opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
+              As marcas que mais crescem são aquelas que investem em design, especialmente na identidade visual.
+            </p>
 
-              <Button 
-                variant="outline" 
-                onClick={scrollToContact} 
-                className="text-base px-8 py-6 rounded-full border-2 border-foreground hover:bg-foreground hover:text-background transition-all"
-              >
-                Como trabalhamos?
-              </Button>
-            </div>
+            <button
+              onClick={scrollToContact}
+              className="mt-10 md:mt-12 inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:via-pink-700 hover:to-fuchsia-700 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.6)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] hover:scale-105 animate-fade-in opacity-0 [animation-delay:1200ms] [animation-fill-mode:forwards]"
+            >
+              Como trabalhamos?
+            </button>
           </div>
 
           {/* Image Indicators */}
