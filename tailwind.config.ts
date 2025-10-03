@@ -81,6 +81,7 @@ export default {
         'gradient-card': 'var(--gradient-card)',
         'gradient-numbers': 'var(--gradient-numbers)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-whatsapp': 'var(--gradient-whatsapp)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',

@@ -52,6 +52,7 @@ All colors MUST be HSL.
     --gradient-card: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 6%));
     --gradient-numbers: linear-gradient(135deg, hsl(300 100% 85%), hsl(200 100% 85%));
     --gradient-hero: linear-gradient(135deg, hsl(270 70% 35%), hsl(280 80% 45%));
+    --gradient-whatsapp: linear-gradient(135deg, hsl(142 75% 40%), hsl(142 75% 55%));
     
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);

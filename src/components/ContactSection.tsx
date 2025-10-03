@@ -60,7 +60,7 @@ const ContactSection = () => {
 
         {/* WhatsApp Contact Button */}
         <div className="text-center mt-16">
-          <Button onClick={handleWhatsAppContact} className="bg-white text-green-600 hover:bg-green-50 border border-green-600 px-8 py-4 text-lg font-semibold rounded-2xl shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]" size="lg">
+          <Button onClick={handleWhatsAppContact} className="bg-gradient-whatsapp text-white border-0 px-8 py-4 text-lg font-semibold rounded-2xl shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02]" size="lg">
             <MessageCircle className="mr-2" size={24} />
             Começar meu projeto
           </Button>
