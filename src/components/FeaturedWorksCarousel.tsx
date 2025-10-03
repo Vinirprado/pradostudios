@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 
 const FeaturedWorksCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -54,9 +54,7 @@ const FeaturedWorksCarousel = () => {
           <div className="space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l8 3.6v7.22c0 4.52-3.13 8.77-8 9.8-4.87-1.03-8-5.28-8-9.8V7.78l8-3.6z" fill="#ff0080"/>
-              </svg>
+              <Check className="w-5 h-5 text-[#ff0080]" />
               <span className="font-semibold">Workflow</span>
             </div>
 
