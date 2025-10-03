@@ -1,5 +1,5 @@
 import viniciusPortrait from '@/assets/vinicius-new-portrait.jpg';
-import heroBackground from '@/assets/hero-wallpaper.png';
+import aboutBackground from '@/assets/about-background-new.png';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 const AboutSection = () => {
   const {
@@ -7,8 +7,12 @@ const AboutSection = () => {
     isVisible
   } = useScrollReveal();
   return <section id="sobre" className="py-24 px-6 relative overflow-hidden" ref={ref}>
-      {/* Background gradient - rotated 180 degrees */}
-      <img src={heroBackground} alt="Background gradient" className="absolute inset-0 w-full h-full object-cover z-0 rotate-180 scale-x-[-1]" loading="lazy" decoding="async" />
+      {/* Background image */}
+      <img src={aboutBackground} alt="Background gradient" className="absolute inset-0 w-full h-full object-cover object-center z-0 scale-110" loading="lazy" decoding="async" />
+      
+      {/* Gradient overlays for fade effect */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent z-[1]" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent z-[1]" />
       
       {/* Content overlay */}
       <div className="relative z-10">
@@ -24,11 +28,11 @@ const AboutSection = () => {
                 Sou Vinicius Ramos, designer especializado em criar identidades visuais completas que unem estratégia, estética e propósito.
               </p>
               
-              <p className="text-slate-50">
+              <p>
                 Acredito que uma marca forte nasce do equilíbrio entre criatividade e clareza.
               </p>
               
-              <p className="text-slate-50">
+              <p>
                 Minha missão é ajudar negócios e pessoas a se destacarem com autenticidade e solidez visual.
               </p>
             </div>
