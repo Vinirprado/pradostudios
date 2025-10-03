@@ -39,7 +39,7 @@ const AboutSection = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-gradient-card rounded-2xl p-8 shadow-elevated bg-violet-600">
+            <div className="bg-gradient-card rounded-2xl p-8 shadow-elevated bg-violet-600/90 backdrop-blur-sm">
               <img src={viniciusPortrait} alt="Vinicius Ramos - Designer de Identidade Visual" className="w-full h-auto rounded-xl object-cover" loading="lazy" width="448" height="597" decoding="async" sizes="(max-width: 1024px) 100vw, 448px" />
             </div>
           </div>
