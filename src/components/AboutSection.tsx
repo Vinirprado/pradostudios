@@ -24,15 +24,15 @@ const AboutSection = () => {
             </h2>
             
             <div className="space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              <p>
+              <p className="text-slate-50">
                 Sou Vinicius Ramos, designer especializado em criar identidades visuais completas que unem estratégia, estética e propósito.
               </p>
               
-              <p>
+              <p className="text-slate-50">
                 Acredito que uma marca forte nasce do equilíbrio entre criatividade e clareza.
               </p>
               
-              <p>
+              <p className="text-slate-50">
                 Minha missão é ajudar negócios e pessoas a se destacarem com autenticidade e solidez visual.
               </p>
             </div>
