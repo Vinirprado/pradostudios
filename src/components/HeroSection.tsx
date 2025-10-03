@@ -29,7 +29,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background px-6 py-20">
+    <section className="min-h-screen flex items-center justify-center bg-background px-6 pt-32 pb-20">
       <div className="container mx-auto max-w-7xl">
         {/* Rounded Rectangle Container */}
         <div className="relative bg-muted/30 rounded-[3rem] overflow-hidden min-h-[600px] md:min-h-[700px]">
