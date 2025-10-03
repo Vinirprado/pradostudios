@@ -1,15 +1,22 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import brandIdeia from '@/assets/brand-ideia.png';
+import brandVaranda from '@/assets/brand-varanda.png';
+import brandAqua from '@/assets/brand-aqua.png';
+import brandGadgets from '@/assets/brand-gadgets.png';
+import brandBrainstorm from '@/assets/brand-brainstorm.png';
+import brandAmerClean from '@/assets/brand-amerclean.png';
 
 const BrandsSection = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
 
   // Array de logos das marcas
   const brands = [
-    { name: 'Apolocred', logo: '/src/assets/apolocred.png' },
-    { name: 'Aqua America', logo: '/src/assets/aqua-america.png' },
-    { name: 'Brainstorm Academy', logo: '/src/assets/brainstorm-academy.png' },
-    { name: 'Varanda Co', logo: '/src/assets/varanda-co.png' },
-    { name: 'Prado Studio', logo: '/src/assets/prado-studio-logo-white.png' },
+    { name: 'Ideia', logo: brandIdeia },
+    { name: 'Varanda & Co', logo: brandVaranda },
+    { name: 'Aqua America', logo: brandAqua },
+    { name: 'Gadgets Centre', logo: brandGadgets },
+    { name: 'Brainstorm Academy', logo: brandBrainstorm },
+    { name: 'Amer Clean', logo: brandAmerClean },
   ];
 
   // Duplicar as marcas para criar o efeito de loop infinito
