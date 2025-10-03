@@ -59,7 +59,7 @@ const BrandsSection = () => {
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-36 md:h-48 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                    className="h-24 md:h-32 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
                   />
                 </div>
               ))}
