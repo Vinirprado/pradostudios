@@ -19,7 +19,7 @@ const ContactSection = () => {
       <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-auto">
           {/* Card 1 - Main CTA */}
-          <Card className="bg-hero-primary text-white border-0 flex items-center justify-center aspect-square">
+          <Card className="bg-hero-primary text-white border-0 flex items-center justify-center aspect-square h-[400px]">
             <CardContent className="p-8 text-center">
               <h2 className="text-xl font-display font-bold mb-6 leading-tight text-gray-950 md:text-6xl">
                 Pronto para transformar sua marca em uma identidade inesquecível?
@@ -31,7 +31,7 @@ const ContactSection = () => {
           </Card>
 
           {/* Card 2 - Process Image Placeholder */}
-          <Card className="bg-gradient-to-br from-muted/50 to-muted/30 border border-border/20 flex items-center justify-center aspect-square overflow-hidden">
+          <Card className="bg-gradient-to-br from-muted/50 to-muted/30 border border-border/20 flex items-center justify-center aspect-square overflow-hidden h-[400px]">
             <img 
               src={drawingTablet} 
               alt="Mesa digitalizadora" 
@@ -40,7 +40,7 @@ const ContactSection = () => {
           </Card>
 
           {/* Card 3 - Services Image Placeholder */}
-          <Card className="bg-gradient-to-br from-card to-card/80 border border-border/20 flex items-center justify-center aspect-square overflow-hidden">
+          <Card className="bg-gradient-to-br from-card to-card/80 border border-border/20 flex items-center justify-center aspect-square overflow-hidden h-[400px]">
             <img 
               src={workspace} 
               alt="Workspace criativo" 
@@ -49,7 +49,7 @@ const ContactSection = () => {
           </Card>
 
           {/* Card 4 - Philosophy */}
-          <Card className="border border-border/20 flex items-center justify-center aspect-square bg-rose-900">
+          <Card className="border border-border/20 flex items-center justify-center aspect-square bg-rose-900 h-[400px]">
             <CardContent className="p-8 text-center">
               <p className="text-base text-text-primary font-medium leading-relaxed md:text-4xl">
                 Design fala quando palavras não são suficientes. Quem investe em design, economiza explicações.
