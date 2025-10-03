@@ -3,6 +3,7 @@ import portfolio1 from '@/assets/portfolio-1.jpg';
 import portfolio2 from '@/assets/portfolio-2.jpg';
 import portfolio3 from '@/assets/portfolio-3.jpg';
 import portfolio4 from '@/assets/portfolio-4.jpg';
+import behanceLogo from '@/assets/behance-logo.png';
 
 const PortfolioShowcaseSection = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
@@ -38,9 +39,10 @@ const PortfolioShowcaseSection = () => {
               href="https://www.behance.net/seu-perfil"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:via-pink-700 hover:to-fuchsia-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:via-pink-700 hover:to-fuchsia-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.6)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] hover:scale-105"
             >
               Ver no Behance
+              <img src={behanceLogo} alt="Behance" className="w-6 h-6" />
             </a>
           </div>
 
