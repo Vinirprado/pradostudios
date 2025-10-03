@@ -28,6 +28,12 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('projetos')} className="text-text-secondary hover:text-hero-primary transition-smooth">PROJETOS</button>
             <button onClick={() => scrollToSection('processo')} className="text-text-secondary hover:text-hero-primary transition-smooth">PROCESSO</button>
             <button onClick={() => scrollToSection('contato')} className="text-text-secondary hover:text-hero-primary transition-smooth">CONTATO</button>
+            <button 
+              onClick={() => scrollToSection('contato')} 
+              className="bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:via-pink-700 hover:to-fuchsia-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              Começar meu projeto
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -54,6 +60,12 @@ const Navigation = () => {
             </button>
             <button onClick={() => scrollToSection('contato')} className="block text-text-secondary hover:text-hero-primary transition-smooth">
               Contato
+            </button>
+            <button 
+              onClick={() => scrollToSection('contato')} 
+              className="block w-full bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg text-center mt-4"
+            >
+              Começar meu projeto
             </button>
           </div>}
       </div>
