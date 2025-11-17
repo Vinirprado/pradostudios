@@ -38,7 +38,7 @@ const PortfolioShowcaseSection = () => {
             </p>
 
             <a
-              href="https://www.behance.net/seu-perfil"
+              href="https://www.behance.net/viniciusramosdoprado"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:via-pink-700 hover:to-fuchsia-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.6)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] hover:scale-105"
