@@ -1,4 +1,5 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useLanguage } from '@/contexts/LanguageContext';
 import portfolioApolocred from '@/assets/portfolio-apolocred.png';
 import portfolioComape from '@/assets/portfolio-comape.png';
 import portfolioKikibank from '@/assets/portfolio-kikibank.png';
@@ -8,6 +9,7 @@ import behanceLogo from '@/assets/behance-logo.png';
 
 const PortfolioShowcaseSection = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
+  const { t } = useLanguage();
 
   const portfolioImages = [
     portfolioApolocred,
@@ -29,12 +31,11 @@ const PortfolioShowcaseSection = () => {
           {/* Left side - Text content */}
           <div className="space-y-6">
             <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-              Confira meu portfólio completo
+              {t('portfolioShowcase.title')}
             </h2>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Explore todos os meus projetos de design, branding e identidade visual. 
-              Cada trabalho conta uma história única de criatividade e estratégia.
+              {t('portfolioShowcase.description')}
             </p>
 
             <a
@@ -43,7 +44,7 @@ const PortfolioShowcaseSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:via-pink-700 hover:to-fuchsia-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.6)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] hover:scale-105"
             >
-              Ver no Behance
+              {t('portfolioShowcase.cta')}
               <img src={behanceLogo} alt="Behance" className="w-6 h-6" />
             </a>
           </div>

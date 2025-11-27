@@ -1,13 +1,17 @@
 import { Instagram, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import pradoStudioLogo from '@/assets/prado-studio-logo-color.png';
+
 const Footer = () => {
-  return <footer className="py-12 px-6 border-t border-border/30">
+  const { t } = useLanguage();
+
+  return (
+    <footer className="py-12 px-6 border-t border-border/30">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-row justify-between items-center bg-neutral-50 rounded-3xl p-6">
           <div className="flex items-center space-x-4">
             <img src={pradoStudioLogo} alt="Prado Studio Logo" className="h-12" width="85" height="48" decoding="async" sizes="85px" />
-            <div className="text-text-muted">© 2025
- Prado Studios. Todos os direitos reservados.</div>
+            <div className="text-text-muted">© 2025 Prado Studios. {t('footer.rights')}</div>
           </div>
           
           <div className="flex space-x-6">
@@ -23,6 +27,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

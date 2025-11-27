@@ -1,26 +1,28 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ServicesSection = () => {
   const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false, false]);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const { t } = useLanguage();
   
   const services = [
     {
-      title: "Identidade Visual Completa",
-      description: "Desenvolvimento completo da marca, desde o conceito até as aplicações finais."
+      titleKey: 'services.service1.title',
+      descriptionKey: 'services.service1.description'
     },
     {
-      title: "Criação de Marca & Direção Criativa",
-      description: "Estratégia criativa e direcionamento visual para posicionar sua marca no mercado."
+      titleKey: 'services.service2.title',
+      descriptionKey: 'services.service2.description'
     },
     {
-      title: "Manual de Marca e Aplicações",
-      description: "Guias detalhados para manter a consistência visual em todas as aplicações."
+      titleKey: 'services.service3.title',
+      descriptionKey: 'services.service3.description'
     },
     {
-      title: "Consultoria Visual",
-      description: "Análise e orientação para melhorar a presença visual da sua marca."
+      titleKey: 'services.service4.title',
+      descriptionKey: 'services.service4.description'
     }
   ];
 
@@ -61,10 +63,10 @@ const ServicesSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-display font-bold text-foreground mb-6 md:text-6xl lg:text-7xl">
-            Soluções que Ofereço
+            {t('services.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed md:text-xl">
-            Cada detalhe importa. Meu processo vai além do design: envolve pesquisa, estratégia e a criação de uma identidade que comunica a essência da sua marca de forma clara e memorável.
+            {t('services.description')}
           </p>
         </div>
         
@@ -80,10 +82,10 @@ const ServicesSection = () => {
               }`}
             >
               <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 leading-tight">
-                {service.title}
+                {t(service.titleKey)}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                {service.description}
+                {t(service.descriptionKey)}
               </p>
             </Card>
           ))}
