@@ -42,57 +42,59 @@ const LanguageSwitcher = () => {
               language === 'en' ? 'bg-white/5' : ''
             }`}
           >
-            {/* USA/Canada Flag */}
+            {/* USA/Canada Split Flag */}
             <div className="w-8 h-6 rounded overflow-hidden flex-shrink-0 shadow-sm">
               <svg viewBox="0 0 32 24" className="w-full h-full">
-                {/* US Flag */}
-                <rect fill="#B22234" width="32" height="24"/>
-                <rect fill="#fff" y="1.846" width="32" height="1.846"/>
-                <rect fill="#fff" y="5.538" width="32" height="1.846"/>
-                <rect fill="#fff" y="9.231" width="32" height="1.846"/>
-                <rect fill="#fff" y="12.923" width="32" height="1.846"/>
-                <rect fill="#fff" y="16.615" width="32" height="1.846"/>
-                <rect fill="#fff" y="20.308" width="32" height="1.846"/>
-                <rect fill="#3C3B6E" width="12.8" height="12.923"/>
-                {/* Stars (simplified) */}
-                <g fill="#fff">
-                  <circle cx="2.133" cy="1.385" r="0.6"/>
-                  <circle cx="4.267" cy="1.385" r="0.6"/>
-                  <circle cx="6.4" cy="1.385" r="0.6"/>
-                  <circle cx="8.533" cy="1.385" r="0.6"/>
-                  <circle cx="10.667" cy="1.385" r="0.6"/>
-                  <circle cx="3.2" cy="2.769" r="0.6"/>
-                  <circle cx="5.333" cy="2.769" r="0.6"/>
-                  <circle cx="7.467" cy="2.769" r="0.6"/>
-                  <circle cx="9.6" cy="2.769" r="0.6"/>
-                  <circle cx="2.133" cy="4.154" r="0.6"/>
-                  <circle cx="4.267" cy="4.154" r="0.6"/>
-                  <circle cx="6.4" cy="4.154" r="0.6"/>
-                  <circle cx="8.533" cy="4.154" r="0.6"/>
-                  <circle cx="10.667" cy="4.154" r="0.6"/>
-                  <circle cx="3.2" cy="5.538" r="0.6"/>
-                  <circle cx="5.333" cy="5.538" r="0.6"/>
-                  <circle cx="7.467" cy="5.538" r="0.6"/>
-                  <circle cx="9.6" cy="5.538" r="0.6"/>
-                  <circle cx="2.133" cy="6.923" r="0.6"/>
-                  <circle cx="4.267" cy="6.923" r="0.6"/>
-                  <circle cx="6.4" cy="6.923" r="0.6"/>
-                  <circle cx="8.533" cy="6.923" r="0.6"/>
-                  <circle cx="10.667" cy="6.923" r="0.6"/>
-                  <circle cx="3.2" cy="8.308" r="0.6"/>
-                  <circle cx="5.333" cy="8.308" r="0.6"/>
-                  <circle cx="7.467" cy="8.308" r="0.6"/>
-                  <circle cx="9.6" cy="8.308" r="0.6"/>
-                  <circle cx="2.133" cy="9.692" r="0.6"/>
-                  <circle cx="4.267" cy="9.692" r="0.6"/>
-                  <circle cx="6.4" cy="9.692" r="0.6"/>
-                  <circle cx="8.533" cy="9.692" r="0.6"/>
-                  <circle cx="10.667" cy="9.692" r="0.6"/>
-                  <circle cx="3.2" cy="11.077" r="0.6"/>
-                  <circle cx="5.333" cy="11.077" r="0.6"/>
-                  <circle cx="7.467" cy="11.077" r="0.6"/>
-                  <circle cx="9.6" cy="11.077" r="0.6"/>
+                {/* Left half - USA */}
+                <clipPath id="leftHalf">
+                  <rect x="0" y="0" width="16" height="24"/>
+                </clipPath>
+                <g clipPath="url(#leftHalf)">
+                  <rect fill="#B22234" width="32" height="24"/>
+                  <rect fill="#fff" y="1.846" width="32" height="1.846"/>
+                  <rect fill="#fff" y="5.538" width="32" height="1.846"/>
+                  <rect fill="#fff" y="9.231" width="32" height="1.846"/>
+                  <rect fill="#fff" y="12.923" width="32" height="1.846"/>
+                  <rect fill="#fff" y="16.615" width="32" height="1.846"/>
+                  <rect fill="#fff" y="20.308" width="32" height="1.846"/>
+                  <rect fill="#3C3B6E" width="12.8" height="12.923"/>
+                  <g fill="#fff">
+                    <circle cx="2.133" cy="1.385" r="0.5"/>
+                    <circle cx="4.267" cy="1.385" r="0.5"/>
+                    <circle cx="6.4" cy="1.385" r="0.5"/>
+                    <circle cx="8.533" cy="1.385" r="0.5"/>
+                    <circle cx="10.667" cy="1.385" r="0.5"/>
+                    <circle cx="3.2" cy="2.769" r="0.5"/>
+                    <circle cx="5.333" cy="2.769" r="0.5"/>
+                    <circle cx="7.467" cy="2.769" r="0.5"/>
+                    <circle cx="9.6" cy="2.769" r="0.5"/>
+                    <circle cx="2.133" cy="4.154" r="0.5"/>
+                    <circle cx="4.267" cy="4.154" r="0.5"/>
+                    <circle cx="6.4" cy="4.154" r="0.5"/>
+                    <circle cx="8.533" cy="4.154" r="0.5"/>
+                    <circle cx="10.667" cy="4.154" r="0.5"/>
+                    <circle cx="3.2" cy="5.538" r="0.5"/>
+                    <circle cx="5.333" cy="5.538" r="0.5"/>
+                    <circle cx="7.467" cy="5.538" r="0.5"/>
+                    <circle cx="9.6" cy="5.538" r="0.5"/>
+                  </g>
                 </g>
+                
+                {/* Right half - Canada */}
+                <clipPath id="rightHalf">
+                  <rect x="16" y="0" width="16" height="24"/>
+                </clipPath>
+                <g clipPath="url(#rightHalf)">
+                  {/* White background */}
+                  <rect x="16" fill="#fff" width="16" height="24"/>
+                  {/* Red stripe right */}
+                  <rect x="26" fill="#FF0000" width="6" height="24"/>
+                  {/* Maple leaf (simplified) */}
+                  <path fill="#FF0000" d="M24,6 L24.5,8 L26,8 L25,9.5 L25.5,11 L24,10.5 L24,13 L23,11 L22,13 L22,10.5 L20.5,11 L21,9.5 L20,8 L21.5,8 L22,6 L23,8 L24,6 Z" transform="translate(0, 2)"/>
+                </g>
+                
+                {/* Divider line */}
+                <line x1="16" y1="0" x2="16" y2="24" stroke="#000" strokeWidth="0.5" opacity="0.3"/>
               </svg>
             </div>
             <span className="text-white font-medium">English</span>
