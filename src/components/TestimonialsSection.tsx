@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Quote } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const TestimonialsSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -14,41 +15,43 @@ const TestimonialsSection = () => {
     [Autoplay({ delay: 3000, stopOnInteraction: false })]
   );
 
+  const { t } = useLanguage();
+
   const testimonials = [
     {
       name: "Maria Silva",
       role: "CEO, TechStart",
-      content: "O trabalho do Vinícius superou todas as minhas expectativas. A identidade visual criada para nossa empresa é simplesmente perfeita e representa exatamente o que queríamos comunicar.",
+      contentKey: 'testimonials.t1.content',
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
     },
     {
       name: "João Santos",
       role: "Fundador, InovaLab",
-      content: "Profissional extremamente competente e criativo. Todo o processo foi conduzido com muito profissionalismo, desde o briefing até a entrega final. Recomendo muito!",
+      contentKey: 'testimonials.t2.content',
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
     },
     {
       name: "Ana Costa",
       role: "Diretora de Marketing, BrandCo",
-      content: "A atenção aos detalhes e o cuidado com cada elemento da marca foram impressionantes. O resultado foi uma identidade visual coesa e impactante que elevou nossa presença no mercado.",
+      contentKey: 'testimonials.t3.content',
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
     },
     {
       name: "Pedro Oliveira",
       role: "Proprietário, Café Aroma",
-      content: "Vinícius entendeu perfeitamente a essência do nosso negócio e transformou isso em uma identidade visual única. Nossos clientes adoraram a nova marca!",
+      contentKey: 'testimonials.t4.content',
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
     },
     {
       name: "Carla Mendes",
       role: "Co-founder, EcoVida",
-      content: "A experiência de trabalhar com o Vinícius foi excepcional. Ele é dedicado, criativo e sempre disposto a ajustar até alcançar a perfeição. O resultado superou nossas expectativas!",
+      contentKey: 'testimonials.t5.content',
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop"
     },
     {
       name: "Ricardo Almeida",
       role: "Gerente, FitPro Academia",
-      content: "Profissionalismo e criatividade definem bem o trabalho dele. A nova identidade visual trouxe muito mais credibilidade para nosso negócio e atraiu novos clientes.",
+      contentKey: 'testimonials.t6.content',
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
     }
   ];
@@ -67,10 +70,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-display font-bold text-hero-primary mb-6 md:text-7xl">
-            O que dizem sobre mim
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            A satisfação dos meus clientes é minha maior recompensa. Veja o que eles têm a dizer sobre nosso trabalho juntos.
+            {t('testimonials.description')}
           </p>
         </div>
 
@@ -85,7 +88,7 @@ const TestimonialsSection = () => {
                   <Quote className="w-10 h-10 text-hero-secondary mb-6 opacity-50" />
                   
                   <p className="text-text-secondary leading-relaxed mb-8 min-h-[120px]">
-                    "{testimonial.content}"
+                    "{t(testimonial.contentKey)}"
                   </p>
                   
                   <div className="flex items-center gap-4 pt-6 border-t border-border">
@@ -111,7 +114,7 @@ const TestimonialsSection = () => {
 
         <div className="text-center mt-8">
           <p className="text-sm text-text-muted">
-            ← Arraste para ver mais depoimentos →
+            {t('testimonials.drag')}
           </p>
         </div>
       </div>

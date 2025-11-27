@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FeaturedWorksCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -14,26 +15,32 @@ const FeaturedWorksCarousel = () => {
     [Autoplay({ delay: 4000, stopOnInteraction: true })]
   );
 
+  const { t } = useLanguage();
+
   const works = [
     {
-      etapa: "Etapa 01",
-      title: "Alinhamento Estratégico",
-      description: "Começamos com uma conversa profunda para entender suas metas, desafios e objetivos. Com base nisso, construímos um briefing completo e organizamos todo o planejamento de forma clara, com prazos e entregas bem definidos desde o início."
+      stepKey: 'workflow.step',
+      number: '01',
+      titleKey: 'workflow.step1.title',
+      descriptionKey: 'workflow.step1.description'
     },
     {
-      etapa: "Etapa 02",
-      title: "Pesquisa & Conceito",
-      description: "Mergulhamos no universo da sua marca. Analisamos concorrentes, público-alvo e tendências do mercado. A partir disso, desenvolvemos conceitos criativos que traduzem a essência do seu negócio de forma única e autêntica."
+      stepKey: 'workflow.step',
+      number: '02',
+      titleKey: 'workflow.step2.title',
+      descriptionKey: 'workflow.step2.description'
     },
     {
-      etapa: "Etapa 03",
-      title: "Criação & Refinamento",
-      description: "Aqui a mágica acontece! Desenvolvemos as propostas visuais, explorando cores, formas e tipografias. Apresentamos as opções, coletamos seu feedback e refinamos até alcançar a identidade visual perfeita para sua marca."
+      stepKey: 'workflow.step',
+      number: '03',
+      titleKey: 'workflow.step3.title',
+      descriptionKey: 'workflow.step3.description'
     },
     {
-      etapa: "Etapa 04",
-      title: "Entrega Final & Suporte",
-      description: "Tudo aprovado? Você recebe os arquivos finais de forma organizada, em alta qualidade e prontos para uso. E o melhor: seguimos disponíveis para suporte, melhorias, implementações ou novos ciclos. O projeto finaliza, mas o acompanhamento continua."
+      stepKey: 'workflow.step',
+      number: '04',
+      titleKey: 'workflow.step4.title',
+      descriptionKey: 'workflow.step4.description'
     }
   ];
 
@@ -55,21 +62,21 @@ const FeaturedWorksCarousel = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full">
               <Check className="w-5 h-5 text-[#ff0080]" />
-              <span className="font-semibold">Workflow</span>
+              <span className="font-semibold">{t('workflow.badge')}</span>
             </div>
 
             {/* Main title */}
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
-              <span className="text-[#ff0080]">Do plano</span>
+              <span className="text-[#ff0080]">{t('workflow.title1')}</span>
               <br />
-              <span className="text-black">à execução</span>
+              <span className="text-black">{t('workflow.title2')}</span>
               <br />
-              <span className="text-black">e entrega<span className="text-[#ff0080]">.</span></span>
+              <span className="text-black">{t('workflow.title3')}<span className="text-[#ff0080]">.</span></span>
             </h2>
 
             {/* Description */}
             <p className="text-lg text-[#6b6b6b] leading-relaxed max-w-lg">
-              Trabalhamos com processos ágeis e bem definidos para garantir que cada projeto saia com qualidade, no prazo e sem complicação.
+              {t('workflow.description')}
             </p>
           </div>
 
@@ -113,17 +120,17 @@ const FeaturedWorksCarousel = () => {
                       {/* Badge */}
                       <div className="inline-flex items-center gap-2 bg-white border border-[#d0d0d0] px-5 py-2 rounded-full w-fit mb-8">
                         <Check className="w-4 h-4 text-[#ff0080]" />
-                        <span className="font-semibold text-black text-sm">{work.etapa}</span>
+                        <span className="font-semibold text-black text-sm">{t(work.stepKey)} {work.number}</span>
                       </div>
                       
                       {/* Title */}
                       <h3 className="text-3xl font-display font-bold text-black mb-6 leading-tight">
-                        {work.title}
+                        {t(work.titleKey)}
                       </h3>
                       
                       {/* Description */}
                       <p className="text-[#6b6b6b] leading-relaxed text-base">
-                        {work.description}
+                        {t(work.descriptionKey)}
                       </p>
                     </div>
                   </div>

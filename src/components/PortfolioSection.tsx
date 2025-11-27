@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useLanguage } from '@/contexts/LanguageContext';
 import varandaCo from '@/assets/varanda-co.png';
 import apolocred from '@/assets/apolocred.png';
 import brainstormAcademy from '@/assets/brainstorm-academy.png';
@@ -8,29 +9,37 @@ import aquaAmerica from '@/assets/aqua-america.png';
 const PortfolioSection = () => {
   const navigate = useNavigate();
   const { ref, isVisible } = useScrollReveal();
+  const { t } = useLanguage();
   
-  const projects = [{
-    image: varandaCo,
-    title: "Varanda & Co.",
-    description: "Identidade visual desenvolvida para cafeteria com intuito de trazer a apreciação real do café e do momento, trazendo sofisticação e proximidade.",
-    link: "/projeto/varanda-co"
-  }, {
-    image: apolocred,
-    title: "Apolocred",
-    description: "A Apolocred nasceu com a missão de tornar o acesso à consultoria financeira algo simples, estratégico e de qualidade.",
-    link: "/projeto/apolocred"
-  }, {
-    image: brainstormAcademy,
-    title: "Brainstorm Academy",
-    description: "Abandonamos os clichês e optamos por um visual mais limpo, moderno e inspirador. O objetivo era transmitir uma sensação de inovação e comprometimento com altos padrões no ambiente escolar.",
-    link: "/projeto/brainstorm-academy"
-  }, {
-    image: aquaAmerica,
-    title: "Aqua America",
-    description: "A essência da marca trás o foco em pureza, revitalização e excelência natural. Os principais atributos estão enraizados em oferecer qualidade imaculada, promover o bem-estar e abraçar o que há de melhor na natureza.",
-    link: "/projeto/aqua-america"
-  }];
-  return <section id="projetos" className="py-24 px-6" ref={ref}>
+  const projects = [
+    {
+      image: varandaCo,
+      title: "Varanda & Co.",
+      descriptionKey: 'portfolio.varanda.description',
+      link: "/projeto/varanda-co"
+    },
+    {
+      image: apolocred,
+      title: "Apolocred",
+      descriptionKey: 'portfolio.apolocred.description',
+      link: "/projeto/apolocred"
+    },
+    {
+      image: brainstormAcademy,
+      title: "Brainstorm Academy",
+      descriptionKey: 'portfolio.brainstorm.description',
+      link: "/projeto/brainstorm-academy"
+    },
+    {
+      image: aquaAmerica,
+      title: "Aqua America",
+      descriptionKey: 'portfolio.aqua.description',
+      link: "/projeto/aqua-america"
+    }
+  ];
+
+  return (
+    <section id="projetos" className="py-24 px-6" ref={ref}>
       <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
         isVisible 
           ? 'opacity-100 translate-y-0' 
@@ -38,11 +47,11 @@ const PortfolioSection = () => {
       }`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">
-            Projetos
+            {t('portfolio.title')}
           </h2>
           
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed md:text-lg">
-            Algumas identidades que desenvolvi, cada uma com sua história e essência únicas.
+            {t('portfolio.description')}
           </p>
         </div>
         
@@ -71,16 +80,18 @@ const PortfolioSection = () => {
                   {project.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed">
-                  {project.description}
+                  {t(project.descriptionKey)}
                 </p>
                 <div className="mt-4 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  Ver projeto completo →
+                  {t('portfolio.viewProject')}
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default PortfolioSection;

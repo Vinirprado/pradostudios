@@ -1,4 +1,5 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useLanguage } from '@/contexts/LanguageContext';
 import brandIdeia from '@/assets/brand-ideia.png';
 import brandVaranda from '@/assets/brand-varanda.png';
 import brandAqua from '@/assets/brand-aqua.png';
@@ -8,6 +9,7 @@ import brandAmerClean from '@/assets/brand-amerclean.png';
 
 const BrandsSection = () => {
   const { ref, isVisible } = useScrollReveal(0.1);
+  const { t } = useLanguage();
 
   // Array de logos das marcas
   const brands = [
@@ -39,7 +41,7 @@ const BrandsSection = () => {
       <div className="container mx-auto px-4">
         {/* Título */}
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground">
-          Marcas que confiaram no meu trabalho
+          {t('brands.title')}
         </h2>
 
         {/* Container das logos com fade */}
@@ -73,7 +75,7 @@ const BrandsSection = () => {
             onClick={() => scrollToSection('contato')}
             className="bg-gradient-to-r from-pink-500 via-pink-600 to-fuchsia-600 hover:from-pink-600 hover:via-pink-700 hover:to-fuchsia-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
-            Começar meu projeto
+            {t('brands.cta')}
           </button>
         </div>
       </div>
