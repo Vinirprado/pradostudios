@@ -39,23 +39,23 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="projetos" className="py-16 sm:py-24 px-4 sm:px-6" ref={ref}>
+    <section id="projetos" className="py-12 sm:py-24 px-3 sm:px-6 overflow-hidden" ref={ref}>
       <div className={`container mx-auto max-w-6xl transition-all duration-1000 ease-out ${
         isVisible 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-10'
       }`}>
-        <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-7xl font-display font-bold text-hero-primary mb-6 sm:mb-8">
+        <div className="text-center mb-8 sm:mb-16 px-2">
+          <h2 className="text-2xl sm:text-4xl md:text-7xl font-display font-bold text-hero-primary mb-4 sm:mb-8">
             {t('portfolio.title')}
           </h2>
           
-          <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             {t('portfolio.description')}
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-8">
+        <div className="grid sm:grid-cols-2 gap-3 sm:gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
@@ -75,14 +75,14 @@ const PortfolioSection = () => {
                 />
               </div>
               
-              <div className="p-5 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-display font-semibold text-hero-primary mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300">
+              <div className="p-4 sm:p-8">
+                <h3 className="text-lg sm:text-2xl font-display font-semibold text-hero-primary mb-1.5 sm:mb-3 group-hover:text-accent transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+                <p className="text-xs sm:text-base text-text-secondary leading-relaxed line-clamp-2 sm:line-clamp-none">
                   {t(project.descriptionKey)}
                 </p>
-                <div className="mt-3 sm:mt-4 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="mt-2 sm:mt-4 text-accent text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {t('portfolio.viewProject')}
                 </div>
               </div>
