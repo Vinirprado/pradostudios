@@ -1,25 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import heroImage1 from '@/assets/hero-carousel-1.png';
 import heroImage2 from '@/assets/hero-carousel-2.png';
 import heroImage3 from '@/assets/hero-carousel-3.png';
 
 const HeroSection = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { t } = useLanguage();
   
   const heroImages = [heroImage1, heroImage2, heroImage3];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [heroImages.length]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true,
+      skipSnaps: false,
+      dragFree: false
+    },
+    [Autoplay({ delay: 5000, stopOnInteraction: true })]
+  );
 
   const scrollToContact = () => {
     const element = document.getElementById('contato');
@@ -30,32 +30,52 @@ const HeroSection = () => {
     }
   };
 
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on('select', onSelect);
+    return () => {
+      emblaApi.off('select', onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
+
+  const selectedIndex = emblaApi?.selectedScrollSnap() ?? 0;
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-background px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20">
       <div className="container mx-auto max-w-7xl">
         {/* Rounded Rectangle Container */}
         <div className="relative bg-muted/30 rounded-[2rem] sm:rounded-[3rem] overflow-hidden min-h-[500px] sm:min-h-[600px] md:min-h-[700px]">
-          {/* Background Image Carousel - Full Container */}
-          <div className="absolute inset-0">
-            {heroImages.map((image, index) => (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                <img
-                  src={image}
-                  alt={`${t('hero.imageAlt')} ${index + 1}`}
-                  className="w-full h-full object-cover rounded-[2rem] sm:rounded-[3rem]"
-                />
-              </div>
-            ))}
+          {/* Background Image Carousel - Full Container with Embla */}
+          <div className="absolute inset-0 cursor-grab active:cursor-grabbing" ref={emblaRef}>
+            <div className="flex h-full">
+              {heroImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="flex-[0_0_100%] min-w-0 h-full"
+                >
+                  <img
+                    src={image}
+                    alt={`${t('hero.imageAlt')} ${index + 1}`}
+                    className="w-full h-full object-cover"
+                    draggable="false"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Content Overlay */}
-          <div className="relative z-10 p-6 sm:p-12 md:p-16 lg:p-20 flex flex-col justify-end min-h-[500px] sm:min-h-[600px] md:min-h-[700px]">
-            <div className="max-w-2xl space-y-4 sm:space-y-6 md:space-y-8">
+          <div className="relative z-10 p-6 sm:p-12 md:p-16 lg:p-20 flex flex-col justify-end min-h-[500px] sm:min-h-[600px] md:min-h-[700px] pointer-events-none">
+            <div className="max-w-2xl space-y-4 sm:space-y-6 md:space-y-8 pointer-events-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground drop-shadow-md">
                 {t('hero.title')}
               </h1>
@@ -79,9 +99,9 @@ const HeroSection = () => {
             {heroImages.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentImageIndex(index)}
+                onClick={() => scrollTo(index)}
                 className={`h-2 rounded-full transition-all duration-500 ease-out ${
-                  index === currentImageIndex 
+                  index === selectedIndex 
                     ? 'bg-foreground w-6 sm:w-8' 
                     : 'bg-foreground/30 w-2'
                 }`}
