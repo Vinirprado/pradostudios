@@ -63,45 +63,45 @@ const TestimonialsSection = () => {
   }, [emblaApi]);
 
   return (
-    <section className="py-24 px-6 bg-background relative overflow-hidden">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-background relative overflow-hidden">
       {/* Decorative sidebar with gradient */}
-      <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-[hsl(300_100%_70%)] via-[hsl(280_100%_90%)] to-[hsl(200_100%_70%)]" />
+      <div className="absolute left-0 top-0 bottom-0 w-1 sm:w-2 bg-gradient-to-b from-[hsl(300_100%_70%)] via-[hsl(280_100%_90%)] to-[hsl(200_100%_70%)]" />
       
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-display font-bold text-hero-primary mb-6 md:text-7xl">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-7xl font-display font-bold text-hero-primary mb-4 sm:mb-6">
             {t('testimonials.title')}
           </h2>
-          <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             {t('testimonials.description')}
           </p>
         </div>
 
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6">
+          <div className="flex gap-4 sm:gap-6">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0"
+                className="flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0"
               >
-                <div className="bg-gradient-card rounded-2xl p-8 h-full shadow-soft hover:shadow-elevated transition-smooth cursor-grab active:cursor-grabbing">
-                  <Quote className="w-10 h-10 text-hero-secondary mb-6 opacity-50" />
+                <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-6 sm:p-8 h-full shadow-soft hover:shadow-elevated transition-all duration-500 ease-out cursor-grab active:cursor-grabbing">
+                  <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-hero-secondary mb-4 sm:mb-6 opacity-50" />
                   
-                  <p className="text-text-secondary leading-relaxed mb-8 min-h-[120px]">
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6 sm:mb-8 min-h-[80px] sm:min-h-[120px]">
                     "{t(testimonial.contentKey)}"
                   </p>
                   
-                  <div className="flex items-center gap-4 pt-6 border-t border-border">
+                  <div className="flex items-center gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-border">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover"
+                      className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
                     />
                     <div>
-                      <h4 className="font-semibold text-hero-primary">
+                      <h4 className="font-semibold text-sm sm:text-base text-hero-primary">
                         {testimonial.name}
                       </h4>
-                      <p className="text-sm text-text-muted">
+                      <p className="text-xs sm:text-sm text-text-muted">
                         {testimonial.role}
                       </p>
                     </div>
@@ -112,8 +112,8 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        <div className="text-center mt-8">
-          <p className="text-sm text-text-muted">
+        <div className="text-center mt-6 sm:mt-8">
+          <p className="text-xs sm:text-sm text-text-muted">
             {t('testimonials.drag')}
           </p>
         </div>

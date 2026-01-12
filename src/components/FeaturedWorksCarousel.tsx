@@ -54,19 +54,19 @@ const FeaturedWorksCarousel = () => {
   }, [emblaApi]);
 
   return (
-    <section className="py-24 px-6 bg-[#e8e8e8] relative overflow-hidden">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-[#e8e8e8] relative overflow-hidden">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           {/* Left side - Title and description */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full">
-              <Check className="w-5 h-5 text-[#ff0080]" />
-              <span className="font-semibold">{t('workflow.badge')}</span>
+            <div className="inline-flex items-center gap-2 bg-black text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full">
+              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff0080]" />
+              <span className="font-semibold text-sm sm:text-base">{t('workflow.badge')}</span>
             </div>
 
             {/* Main title */}
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
               <span className="text-[#ff0080]">{t('workflow.title1')}</span>
               <br />
               <span className="text-black">{t('workflow.title2')}</span>
@@ -75,67 +75,85 @@ const FeaturedWorksCarousel = () => {
             </h2>
 
             {/* Description */}
-            <p className="text-lg text-[#6b6b6b] leading-relaxed max-w-lg">
+            <p className="text-base sm:text-lg text-[#6b6b6b] leading-relaxed max-w-lg">
               {t('workflow.description')}
             </p>
           </div>
 
           {/* Right side - Carousel */}
           <div className="relative">
-            {/* Navigation buttons */}
-            <div className="absolute -left-6 top-1/2 -translate-y-1/2 z-20">
+            {/* Navigation buttons - hidden on mobile, show on larger screens */}
+            <div className="hidden sm:block absolute -left-6 top-1/2 -translate-y-1/2 z-20">
               <button
                 onClick={scrollPrev}
-                className="w-12 h-12 rounded-full bg-[#666] hover:bg-[#555] text-white flex items-center justify-center transition-colors shadow-lg"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#666] hover:bg-[#555] text-white flex items-center justify-center transition-all duration-300 shadow-lg active:scale-95"
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
             
-            <div className="absolute -right-6 top-1/2 -translate-y-1/2 z-20">
+            <div className="hidden sm:block absolute -right-6 top-1/2 -translate-y-1/2 z-20">
               <button
                 onClick={scrollNext}
-                className="w-12 h-12 rounded-full bg-[#666] hover:bg-[#555] text-white flex items-center justify-center transition-colors shadow-lg"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#666] hover:bg-[#555] text-white flex items-center justify-center transition-all duration-300 shadow-lg active:scale-95"
                 aria-label="Next slide"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
 
             {/* Left fade overlay */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#e8e8e8] to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-10 sm:w-20 bg-gradient-to-r from-[#e8e8e8] to-transparent z-10 pointer-events-none" />
             
             {/* Right fade overlay */}
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#e8e8e8] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-10 sm:w-20 bg-gradient-to-l from-[#e8e8e8] to-transparent z-10 pointer-events-none" />
             
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6">
+              <div className="flex gap-4 sm:gap-6">
                 {works.map((work, index) => (
                   <div
                     key={index}
                     className="flex-[0_0_100%] min-w-0"
                   >
-                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 h-[400px] flex flex-col shadow-lg hover:shadow-xl transition-all duration-500 cursor-grab active:cursor-grabbing border border-[#d0d0d0]">
+                    <div className="bg-white/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 h-[300px] sm:h-[400px] flex flex-col shadow-lg hover:shadow-xl transition-all duration-500 ease-out cursor-grab active:cursor-grabbing border border-[#d0d0d0]">
                       {/* Badge */}
-                      <div className="inline-flex items-center gap-2 bg-white border border-[#d0d0d0] px-5 py-2 rounded-full w-fit mb-8">
-                        <Check className="w-4 h-4 text-[#ff0080]" />
-                        <span className="font-semibold text-black text-sm">{t(work.stepKey)} {work.number}</span>
+                      <div className="inline-flex items-center gap-2 bg-white border border-[#d0d0d0] px-4 sm:px-5 py-2 rounded-full w-fit mb-6 sm:mb-8">
+                        <Check className="w-3 h-3 sm:w-4 sm:h-4 text-[#ff0080]" />
+                        <span className="font-semibold text-black text-xs sm:text-sm">{t(work.stepKey)} {work.number}</span>
                       </div>
                       
                       {/* Title */}
-                      <h3 className="text-3xl font-display font-bold text-black mb-6 leading-tight">
+                      <h3 className="text-xl sm:text-3xl font-display font-bold text-black mb-4 sm:mb-6 leading-tight">
                         {t(work.titleKey)}
                       </h3>
                       
                       {/* Description */}
-                      <p className="text-[#6b6b6b] leading-relaxed text-base">
+                      <p className="text-[#6b6b6b] leading-relaxed text-sm sm:text-base">
                         {t(work.descriptionKey)}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Mobile navigation dots */}
+            <div className="flex justify-center gap-2 mt-4 sm:hidden">
+              <button
+                onClick={scrollPrev}
+                className="w-8 h-8 rounded-full bg-[#666] hover:bg-[#555] text-white flex items-center justify-center transition-all duration-300 active:scale-95"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={scrollNext}
+                className="w-8 h-8 rounded-full bg-[#666] hover:bg-[#555] text-white flex items-center justify-center transition-all duration-300 active:scale-95"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>
