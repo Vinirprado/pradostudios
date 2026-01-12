@@ -30,7 +30,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="processo" className="relative py-16 sm:py-24 px-4 sm:px-6 overflow-hidden" ref={ref}>
+    <section id="processo" className="relative py-12 sm:py-24 px-3 sm:px-6 overflow-hidden" ref={ref}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -38,37 +38,37 @@ const ProcessSection = () => {
       />
       
       {/* Top Gradient Overlay */}
-      <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-background to-transparent z-10" />
+      <div className="absolute top-0 left-0 right-0 h-20 sm:h-32 bg-gradient-to-b from-background to-transparent z-10" />
       
       {/* Bottom Gradient Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-background to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-32 bg-gradient-to-t from-background to-transparent z-10" />
       
       {/* Content */}
-      <div className="relative z-20">
+      <div className="relative z-20 overflow-hidden">
         <div className={`container mx-auto max-w-6xl transition-all duration-1000 ease-out ${
           isVisible 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-10'
         }`}>
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-7xl font-display font-bold text-hero-primary mb-6 sm:mb-8">
+          <div className="text-center mb-8 sm:mb-16 px-2">
+            <h2 className="text-2xl sm:text-4xl md:text-7xl font-display font-bold text-hero-primary mb-4 sm:mb-8">
               {t('process.title')}
             </h2>
             
-            <p className="text-base sm:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed">
               {t('process.description')}
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-soft hover:shadow-elevated transition-all duration-500 ease-out hover:scale-[1.02] mb-4 sm:mb-6 h-auto sm:h-[280px] flex flex-col justify-center">
-                  <div className="text-2xl sm:text-4xl font-display font-bold mb-2 sm:mb-4 bg-gradient-numbers bg-clip-text text-transparent">
+                <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-soft hover:shadow-elevated transition-all duration-500 ease-out hover:scale-[1.02] mb-3 sm:mb-6 h-auto sm:h-[280px] flex flex-col justify-center">
+                  <div className="text-xl sm:text-4xl font-display font-bold mb-2 sm:mb-4 bg-gradient-numbers bg-clip-text text-transparent">
                     {step.number}
                   </div>
                   
-                  <h3 className="text-base sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4 leading-tight">
+                  <h3 className="text-sm sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4 leading-tight">
                     {t(step.titleKey)}
                   </h3>
                   
