@@ -44,38 +44,38 @@ const ApolocredProject = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-gradient-subtle overflow-x-hidden">
       <Navigation />
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 px-6" data-section="0">
+        <section className="py-10 sm:py-16 px-3 sm:px-6" data-section="0">
           <div className={`container mx-auto max-w-6xl ${getSectionClasses(0)}`}>
             <Button 
               variant="ghost" 
               onClick={() => navigate('/')}
-              className="mb-8 text-text-secondary hover:text-hero-primary"
+              className="mb-6 sm:mb-8 text-text-secondary hover:text-hero-primary text-sm"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar para Portfolio
             </Button>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
-                <h1 className="text-5xl font-display font-bold text-hero-primary mb-6 md:text-7xl">
+                <h1 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-hero-primary mb-4 sm:mb-6">
                   Apolocred
                 </h1>
-                <p className="text-xl text-text-secondary leading-relaxed mb-8">
+                <p className="text-sm sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-8">
                   A Apolocred nasceu com a missão de tornar o acesso à consultoria financeira algo simples, estratégico e de qualidade.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div>
-                    <span className="text-sm font-medium text-accent uppercase tracking-wide">Cliente</span>
-                    <p className="text-text-secondary">Apolocred Consultoria</p>
+                    <span className="text-xs sm:text-sm font-medium text-accent uppercase tracking-wide">Cliente</span>
+                    <p className="text-text-secondary text-sm sm:text-base">Apolocred Consultoria</p>
                   </div>
                   <div>
-                    <span className="text-sm font-medium text-accent uppercase tracking-wide">Serviços</span>
-                    <p className="text-text-secondary">Identidade Visual, Branding, Consultoria Estratégica</p>
+                    <span className="text-xs sm:text-sm font-medium text-accent uppercase tracking-wide">Serviços</span>
+                    <p className="text-text-secondary text-sm sm:text-base">Identidade Visual, Branding, Consultoria Estratégica</p>
                   </div>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const ApolocredProject = () => {
                 <img 
                   src={apolocred} 
                   alt="Apolocred - Identidade Visual"
-                  className="w-full rounded-2xl shadow-elegant"
+                  className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
                 />
               </div>
             </div>
@@ -92,50 +92,50 @@ const ApolocredProject = () => {
         </section>
 
         {/* Concept Section */}
-        <section className="py-24 px-6" data-section="1">
+        <section className="py-12 sm:py-24 px-3 sm:px-6" data-section="1">
           <div className={`container mx-auto max-w-6xl ${getSectionClasses(1)}`}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-display font-bold text-hero-primary mb-8">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-4xl font-display font-bold text-hero-primary mb-4 sm:mb-8">
                 Estratégia
               </h2>
-              <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
                 Desenvolvemos uma identidade que transmite confiança, expertise e acessibilidade no mundo das finanças.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-8 bg-gradient-card rounded-2xl">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">🎯</span>
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-8">
+              <div className="text-center p-5 sm:p-8 bg-gradient-card rounded-xl sm:rounded-2xl">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <span className="text-xl sm:text-2xl">🎯</span>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-hero-primary mb-4">
+                <h3 className="text-lg sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4">
                   Estratégia
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-xs sm:text-base">
                   Soluções financeiras pensadas estrategicamente para cada cliente e situação específica.
                 </p>
               </div>
               
-              <div className="text-center p-8 bg-gradient-card rounded-2xl">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">🤝</span>
+              <div className="text-center p-5 sm:p-8 bg-gradient-card rounded-xl sm:rounded-2xl">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <span className="text-xl sm:text-2xl">🤝</span>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-hero-primary mb-4">
+                <h3 className="text-lg sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4">
                   Simplicidade
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-xs sm:text-base">
                   Tornar o complexo mundo financeiro acessível através de comunicação clara e direta.
                 </p>
               </div>
               
-              <div className="text-center p-8 bg-gradient-card rounded-2xl">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">⭐</span>
+              <div className="text-center p-5 sm:p-8 bg-gradient-card rounded-xl sm:rounded-2xl">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <span className="text-xl sm:text-2xl">⭐</span>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-hero-primary mb-4">
+                <h3 className="text-lg sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4">
                   Qualidade
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-xs sm:text-base">
                   Padrão de excelência em todos os serviços prestados, garantindo resultados superiores.
                 </p>
               </div>
@@ -144,54 +144,54 @@ const ApolocredProject = () => {
         </section>
 
         {/* Visual Elements */}
-        <section className="py-24 px-6 bg-secondary/5" data-section="2">
+        <section className="py-12 sm:py-24 px-3 sm:px-6 bg-secondary/5" data-section="2">
           <div className={`container mx-auto max-w-7xl ${getSectionClasses(2)}`}>
-            <h2 className="text-4xl font-display font-bold text-hero-primary mb-16 text-center">
+            <h2 className="text-2xl sm:text-4xl font-display font-bold text-hero-primary mb-10 sm:mb-16 text-center">
               Identidade Visual
             </h2>
             
             {/* Billboard Campaign */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={apolocredBillboard} 
                 alt="Campanha outdoor Apolocred"
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
             {/* Brand Products */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={apolocredProducts} 
                 alt="Produtos e materiais corporativos Apolocred"
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
             {/* Social Media */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={apolocredSocial} 
                 alt="Redes sociais e comunicação digital Apolocred"
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
             {/* Apparel and Branding */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={apolocredApparel} 
                 alt="Material corporativo e uniformes Apolocred"
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
             {/* Typography */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={apolocredTypography} 
                 alt="Tipografia da marca Apolocred"
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
@@ -200,35 +200,35 @@ const ApolocredProject = () => {
               <img 
                 src={apolocredBrandConcept} 
                 alt="Conceito e elementos da marca Apolocred"
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
           </div>
         </section>
 
         {/* Results Section */}
-        <section className="py-24 px-6" data-section="3">
+        <section className="py-12 sm:py-24 px-3 sm:px-6" data-section="3">
           <div className={`container mx-auto max-w-6xl ${getSectionClasses(3)}`}>
             <div className="text-center">
-              <h2 className="text-4xl font-display font-bold text-hero-primary mb-8">
+              <h2 className="text-2xl sm:text-4xl font-display font-bold text-hero-primary mb-4 sm:mb-8">
                 Impacto
               </h2>
-              <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mb-16">
+              <p className="text-sm sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mb-10 sm:mb-16 px-2">
                 Uma marca que posiciona a Apolocred como referência em consultoria financeira, transmitindo credibilidade e expertise.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">250%</div>
-                  <p className="text-text-secondary">Aumento na captação</p>
+                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-1 sm:mb-2">250%</div>
+                  <p className="text-text-secondary text-xs sm:text-base">Aumento na captação</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">4</div>
-                  <p className="text-text-secondary">Semanas de projeto</p>
+                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-1 sm:mb-2">4</div>
+                  <p className="text-text-secondary text-xs sm:text-base">Semanas de projeto</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">20+</div>
-                  <p className="text-text-secondary">Materiais desenvolvidos</p>
+                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-1 sm:mb-2">20+</div>
+                  <p className="text-text-secondary text-xs sm:text-base">Materiais desenvolvidos</p>
                 </div>
               </div>
             </div>

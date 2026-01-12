@@ -8,31 +8,31 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="sobre" className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden" ref={ref}>
+    <section id="sobre" className="py-12 sm:py-24 px-3 sm:px-6 relative overflow-hidden" ref={ref}>
       {/* Background image */}
       <img src={aboutBackground} alt="Background gradient" className="absolute inset-0 w-full h-full object-cover object-center z-0 scale-150" loading="lazy" decoding="async" />
       
       {/* Gradient overlays for fade effect */}
-      <div className="absolute inset-x-0 top-0 h-24 sm:h-32 bg-gradient-to-b from-background to-transparent z-[1]" />
-      <div className="absolute inset-x-0 bottom-0 h-24 sm:h-32 bg-gradient-to-t from-background to-transparent z-[1]" />
+      <div className="absolute inset-x-0 top-0 h-20 sm:h-32 bg-gradient-to-b from-background to-transparent z-[1]" />
+      <div className="absolute inset-x-0 bottom-0 h-20 sm:h-32 bg-gradient-to-t from-background to-transparent z-[1]" />
       
       {/* Content overlay */}
-      <div className="relative z-10">
+      <div className="relative z-10 overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-          <div className={`grid lg:grid-cols-2 gap-10 sm:gap-16 items-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`grid lg:grid-cols-2 gap-8 sm:gap-16 items-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Image first on mobile */}
             <div className="relative order-1 lg:order-2">
-              <div className="bg-gradient-card rounded-2xl p-4 sm:p-8 shadow-elevated bg-violet-600/90 backdrop-blur-sm">
-                <img src={viniciusPortrait} alt={t('about.imageAlt')} className="w-full h-auto rounded-xl object-cover" loading="lazy" width="448" height="597" decoding="async" sizes="(max-width: 1024px) 100vw, 448px" />
+              <div className="bg-gradient-card rounded-xl sm:rounded-2xl p-3 sm:p-8 shadow-elevated bg-violet-600/90 backdrop-blur-sm">
+                <img src={viniciusPortrait} alt={t('about.imageAlt')} className="w-full h-auto rounded-lg sm:rounded-xl object-cover" loading="lazy" width="448" height="597" decoding="async" sizes="(max-width: 1024px) 100vw, 448px" />
               </div>
             </div>
             
-            <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-hero-primary leading-tight">
+            <div className="space-y-4 sm:space-y-8 order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-hero-primary leading-tight">
                 {t('about.title')}
               </h2>
               
-              <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl text-text-secondary leading-relaxed">
+              <div className="space-y-3 sm:space-y-6 text-sm sm:text-lg md:text-xl text-text-secondary leading-relaxed">
                 <p className="text-slate-50">
                   {t('about.p1')}
                 </p>

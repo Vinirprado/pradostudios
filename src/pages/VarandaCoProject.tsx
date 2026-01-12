@@ -42,38 +42,38 @@ const VarandaCoProject = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-gradient-subtle overflow-x-hidden">
       <Navigation />
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 px-6" data-section="0">
+        <section className="py-10 sm:py-16 px-3 sm:px-6" data-section="0">
           <div className={`container mx-auto max-w-6xl ${getSectionClasses(0)}`}>
             <Button 
               variant="ghost" 
               onClick={() => navigate('/')}
-              className="mb-8 text-text-secondary hover:text-hero-primary"
+              className="mb-6 sm:mb-8 text-text-secondary hover:text-hero-primary text-sm"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar para Portfolio
             </Button>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
-                <h1 className="text-5xl font-display font-bold text-hero-primary mb-6 md:text-7xl">
+                <h1 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-hero-primary mb-4 sm:mb-6">
                   Varanda & Co.
                 </h1>
-                <p className="text-xl text-text-secondary leading-relaxed mb-8">
+                <p className="text-sm sm:text-xl text-text-secondary leading-relaxed mb-6 sm:mb-8">
                   Identidade visual desenvolvida para cafeteria com intuito de trazer a apreciação real do café e do momento, trazendo sofisticação e proximidade.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div>
-                    <span className="text-sm font-medium text-accent uppercase tracking-wide">Cliente</span>
-                    <p className="text-text-secondary">Varanda & Co. Cafeteria</p>
+                    <span className="text-xs sm:text-sm font-medium text-accent uppercase tracking-wide">Cliente</span>
+                    <p className="text-text-secondary text-sm sm:text-base">Varanda & Co. Cafeteria</p>
                   </div>
                   <div>
-                    <span className="text-sm font-medium text-accent uppercase tracking-wide">Serviços</span>
-                    <p className="text-text-secondary">Identidade Visual, Branding, Material Gráfico</p>
+                    <span className="text-xs sm:text-sm font-medium text-accent uppercase tracking-wide">Serviços</span>
+                    <p className="text-text-secondary text-sm sm:text-base">Identidade Visual, Branding, Material Gráfico</p>
                   </div>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const VarandaCoProject = () => {
                 <img 
                   src={varandaCo} 
                   alt="Varanda & Co. - Identidade Visual"
-                  className="w-full rounded-2xl shadow-elegant"
+                  className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
                 />
               </div>
             </div>
@@ -90,50 +90,50 @@ const VarandaCoProject = () => {
         </section>
 
         {/* Concept Section */}
-        <section className="py-24 px-6" data-section="1">
+        <section className="py-12 sm:py-24 px-3 sm:px-6" data-section="1">
           <div className={`container mx-auto max-w-6xl ${getSectionClasses(1)}`}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-display font-bold text-hero-primary mb-8">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-4xl font-display font-bold text-hero-primary mb-4 sm:mb-8">
                 Conceito
               </h2>
-              <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed px-2">
                 A identidade visual da Varanda & Co. foi pensada para transmitir a experiência única de apreciar um café de qualidade em um ambiente acolhedor e sofisticado.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-8 bg-gradient-card rounded-2xl">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">☕</span>
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-8">
+              <div className="text-center p-5 sm:p-8 bg-gradient-card rounded-xl sm:rounded-2xl">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <span className="text-xl sm:text-2xl">☕</span>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-hero-primary mb-4">
+                <h3 className="text-lg sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4">
                   Qualidade
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-xs sm:text-base">
                   Foco na excelência do produto e na experiência sensorial única do café especial.
                 </p>
               </div>
               
-              <div className="text-center p-8 bg-gradient-card rounded-2xl">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">🏡</span>
+              <div className="text-center p-5 sm:p-8 bg-gradient-card rounded-xl sm:rounded-2xl">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <span className="text-xl sm:text-2xl">🏡</span>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-hero-primary mb-4">
+                <h3 className="text-lg sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4">
                   Acolhimento
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-xs sm:text-base">
                   Ambiente que convida à pausa, ao encontro e à apreciação do momento presente.
                 </p>
               </div>
               
-              <div className="text-center p-8 bg-gradient-card rounded-2xl">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">✨</span>
+              <div className="text-center p-5 sm:p-8 bg-gradient-card rounded-xl sm:rounded-2xl">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <span className="text-xl sm:text-2xl">✨</span>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-hero-primary mb-4">
+                <h3 className="text-lg sm:text-xl font-display font-semibold text-hero-primary mb-2 sm:mb-4">
                   Sofisticação
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-xs sm:text-base">
                   Design elegante que eleva a experiência sem perder a proximidade e autenticidade.
                 </p>
               </div>
@@ -142,36 +142,36 @@ const VarandaCoProject = () => {
         </section>
 
         {/* Visual Elements */}
-        <section className="py-24 px-6 bg-secondary/5" data-section="2">
+        <section className="py-12 sm:py-24 px-3 sm:px-6 bg-secondary/5" data-section="2">
           <div className={`container mx-auto max-w-7xl ${getSectionClasses(2)}`}>
-            <h2 className="text-4xl font-display font-bold text-hero-primary mb-16 text-center">
+            <h2 className="text-2xl sm:text-4xl font-display font-bold text-hero-primary mb-10 sm:mb-16 text-center">
               Elementos Visuais
             </h2>
             
             {/* Main Product Showcase */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={varandaDetails1} 
                 alt="Embalagem e produtos Varanda & Co."
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
             {/* Storefront and Products Grid */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={varandaDetails2} 
                 alt="Fachada da loja e produtos Varanda & Co."
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
             {/* Details Grid */}
-            <div className="mb-12">
+            <div className="mb-6 sm:mb-12">
               <img 
                 src={varandaDetails3} 
                 alt="Detalhes visuais e aplicações da marca"
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
 
@@ -180,35 +180,35 @@ const VarandaCoProject = () => {
               <img 
                 src={varandaTypography} 
                 alt="Tipografia e elementos da marca Varanda & Co."
-                className="w-full rounded-2xl shadow-elegant"
+                className="w-full rounded-xl sm:rounded-2xl shadow-elegant"
               />
             </div>
           </div>
         </section>
 
         {/* Results Section */}
-        <section className="py-24 px-6" data-section="3">
+        <section className="py-12 sm:py-24 px-3 sm:px-6" data-section="3">
           <div className={`container mx-auto max-w-6xl ${getSectionClasses(3)}`}>
             <div className="text-center">
-              <h2 className="text-4xl font-display font-bold text-hero-primary mb-8">
+              <h2 className="text-2xl sm:text-4xl font-display font-bold text-hero-primary mb-4 sm:mb-8">
                 Resultado
               </h2>
-              <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mb-16">
+              <p className="text-sm sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mb-10 sm:mb-16 px-2">
                 Uma identidade visual que consegue transmitir a essência da Varanda & Co.: um lugar onde cada xícara de café é uma experiência especial.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">100%</div>
-                  <p className="text-text-secondary">Aprovação do cliente</p>
+                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-1 sm:mb-2">100%</div>
+                  <p className="text-text-secondary text-xs sm:text-base">Aprovação do cliente</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">3</div>
-                  <p className="text-text-secondary">Semanas de desenvolvimento</p>
+                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-1 sm:mb-2">3</div>
+                  <p className="text-text-secondary text-xs sm:text-base">Semanas de desenvolvimento</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-2">15+</div>
-                  <p className="text-text-secondary">Aplicações da marca</p>
+                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[hsl(300,100%,85%)] to-[hsl(200,100%,85%)] bg-clip-text text-transparent mb-1 sm:mb-2">15+</div>
+                  <p className="text-text-secondary text-xs sm:text-base">Aplicações da marca</p>
                 </div>
               </div>
             </div>
