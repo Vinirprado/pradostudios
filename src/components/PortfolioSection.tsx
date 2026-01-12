@@ -39,34 +39,34 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="projetos" className="py-24 px-6" ref={ref}>
-      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ${
+    <section id="projetos" className="py-16 sm:py-24 px-4 sm:px-6" ref={ref}>
+      <div className={`container mx-auto max-w-6xl transition-all duration-1000 ease-out ${
         isVisible 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-10'
       }`}>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-display font-bold text-hero-primary mb-8 md:text-7xl">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-7xl font-display font-bold text-hero-primary mb-6 sm:mb-8">
             {t('portfolio.title')}
           </h2>
           
-          <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed md:text-lg">
+          <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             {t('portfolio.description')}
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="group bg-gradient-card rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-smooth hover:scale-[1.02] cursor-pointer"
+              className="group bg-gradient-card rounded-xl sm:rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-500 ease-out hover:scale-[1.02] cursor-pointer active:scale-[0.98]"
               onClick={() => navigate(project.link)}
             >
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={`Projeto ${project.title} - Identidade Visual`} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                   width="528"
                   height="297"
@@ -75,14 +75,14 @@ const PortfolioSection = () => {
                 />
               </div>
               
-              <div className="p-8">
-                <h3 className="text-2xl font-display font-semibold text-hero-primary mb-3 group-hover:text-accent transition-colors">
+              <div className="p-5 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-display font-semibold text-hero-primary mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-text-secondary leading-relaxed">
+                <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
                   {t(project.descriptionKey)}
                 </p>
-                <div className="mt-4 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-3 sm:mt-4 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {t('portfolio.viewProject')}
                 </div>
               </div>
