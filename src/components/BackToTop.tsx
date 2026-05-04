@@ -1,8 +1,8 @@
-import { useState, useEffect, forwardRef } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const BackToTop = forwardRef<HTMLButtonElement>((_props, ref) => {
+const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,6 @@ const BackToTop = forwardRef<HTMLButtonElement>((_props, ref) => {
 
   return (
     <Button
-      ref={ref}
       onClick={scrollToTop}
       className="fixed right-6 bottom-6 z-50 bg-hero-primary text-black hover:bg-hero-primary/90 p-3 rounded-full shadow-elevated transition-smooth hover:scale-110"
       size="icon"
@@ -36,8 +35,6 @@ const BackToTop = forwardRef<HTMLButtonElement>((_props, ref) => {
       <ArrowUp size={24} />
     </Button>
   );
-});
-
-BackToTop.displayName = 'BackToTop';
+};
 
 export default BackToTop;
