@@ -73,29 +73,31 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Content Overlay */}
-          <div className="relative z-10 p-6 sm:p-12 md:p-16 lg:p-20 flex flex-col justify-end min-h-[500px] sm:min-h-[600px] md:min-h-[700px] pointer-events-none">
-            <div className="max-w-2xl space-y-4 sm:space-y-6 md:space-y-8 pointer-events-auto">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground drop-shadow-md">
-                {t('hero.title')}
-              </h1>
-              
-              <p className="text-sm sm:text-base md:text-lg text-foreground/80 leading-relaxed max-w-md">
-                {t('hero.description')}
-              </p>
+          {/* Glassmorphism Footer with Title, Subtitle and CTA */}
+          <div className="absolute bottom-0 left-0 right-0 z-10 backdrop-blur-2xl bg-background/20 border-t border-foreground/10 pointer-events-none">
+            <div className="p-6 sm:p-10 md:p-12 lg:p-16 pb-12 sm:pb-16 md:pb-20 pointer-events-auto">
+              <div className="max-w-3xl space-y-4 sm:space-y-6">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight text-foreground drop-shadow-md">
+                  {t('hero.title')}
+                </h1>
+                
+                <p className="text-sm sm:text-base md:text-lg text-foreground/80 leading-relaxed max-w-md">
+                  {t('hero.description')}
+                </p>
 
-              <Button 
-                variant="outline" 
-                onClick={scrollToContact} 
-                className="text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-full border-2 border-foreground hover:bg-foreground hover:text-background transition-all duration-300 active:scale-95"
-              >
-                {t('hero.cta')}
-              </Button>
+                <Button 
+                  variant="outline" 
+                  onClick={scrollToContact} 
+                  className="text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-full border-2 border-foreground hover:bg-foreground hover:text-background transition-all duration-300 active:scale-95"
+                >
+                  {t('hero.cta')}
+                </Button>
+              </div>
             </div>
           </div>
 
           {/* Image Indicators */}
-          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+          <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
             {heroImages.map((_, index) => (
               <button
                 key={index}
