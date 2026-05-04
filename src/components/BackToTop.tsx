@@ -1,20 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, forwardRef } from 'react';
 import { ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const BackToTop = () => {
+const BackToTop = forwardRef<HTMLButtonElement>((_props, ref) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
@@ -31,6 +27,7 @@ const BackToTop = () => {
 
   return (
     <Button
+      ref={ref}
       onClick={scrollToTop}
       className="fixed right-6 bottom-6 z-50 bg-hero-primary text-black hover:bg-hero-primary/90 p-3 rounded-full shadow-elevated transition-smooth hover:scale-110"
       size="icon"
@@ -39,6 +36,8 @@ const BackToTop = () => {
       <ArrowUp size={24} />
     </Button>
   );
-};
+});
+
+BackToTop.displayName = 'BackToTop';
 
 export default BackToTop;
