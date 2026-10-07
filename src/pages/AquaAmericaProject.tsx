@@ -1,3 +1,4 @@
+import Seo, { projectBreadcrumb, projectWork } from '@/components/Seo';
 import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -44,6 +45,7 @@ const AquaAmericaProject = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle overflow-x-hidden">
+      <Seo title="Aqua America — Identidade Visual | Vinicius Ramos" description="Case de identidade visual da Aqua America: logotipo, branding e aplicações desenvolvidas por Vinicius Ramos." path="/projeto/aqua-america" jsonLd={[projectBreadcrumb("Aqua America", "/projeto/aqua-america"), projectWork("Aqua America", "Case de identidade visual da Aqua America: logotipo, branding e aplicações desenvolvidas por Vinicius Ramos.", "/projeto/aqua-america")]} />
       <Navigation />
       
       <main className="pt-20">

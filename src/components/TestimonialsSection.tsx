@@ -98,9 +98,9 @@ const TestimonialsSection = () => {
                       className="w-9 h-9 sm:w-14 sm:h-14 rounded-full object-cover"
                     />
                     <div>
-                      <h4 className="font-semibold text-xs sm:text-base text-hero-primary">
+                      <h3 className="font-semibold text-xs sm:text-base text-hero-primary">
                         {testimonial.name}
-                      </h4>
+                      </h3>
                       <p className="text-[10px] sm:text-sm text-text-muted">
                         {testimonial.role}
                       </p>

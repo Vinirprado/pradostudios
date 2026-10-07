@@ -1,3 +1,4 @@
+import Seo, { projectBreadcrumb, projectWork } from '@/components/Seo';
 import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -45,6 +46,7 @@ const ApolocredProject = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle overflow-x-hidden">
+      <Seo title="Apolocred — Identidade Visual | Vinicius Ramos" description="Case de identidade visual da Apolocred: conceito de marca, tipografia, cores e aplicações criadas por Vinicius Ramos." path="/projeto/apolocred" jsonLd={[projectBreadcrumb("Apolocred", "/projeto/apolocred"), projectWork("Apolocred", "Case de identidade visual da Apolocred: conceito de marca, tipografia, cores e aplicações criadas por Vinicius Ramos.", "/projeto/apolocred")]} />
       <Navigation />
       
       <main className="pt-20">

@@ -1,3 +1,4 @@
+import Seo, { projectBreadcrumb, projectWork } from '@/components/Seo';
 import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -44,6 +45,7 @@ const BrainstormAcademyProject = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle overflow-x-hidden">
+      <Seo title="Brainstorm Academy — Identidade Visual | Vinicius Ramos" description="Case de identidade visual da Brainstorm Academy: logotipo, paleta de cores e materiais criados por Vinicius Ramos." path="/projeto/brainstorm-academy" jsonLd={[projectBreadcrumb("Brainstorm Academy", "/projeto/brainstorm-academy"), projectWork("Brainstorm Academy", "Case de identidade visual da Brainstorm Academy: logotipo, paleta de cores e materiais criados por Vinicius Ramos.", "/projeto/brainstorm-academy")]} />
       <Navigation />
       
       <main className="pt-20">
