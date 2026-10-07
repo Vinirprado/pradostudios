@@ -1,3 +1,4 @@
+import Seo, { projectBreadcrumb, projectWork } from '@/components/Seo';
 import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -43,6 +44,7 @@ const VarandaCoProject = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle overflow-x-hidden">
+      <Seo title="Varanda Co — Identidade Visual | Vinicius Ramos" description="Case de identidade visual da Varanda Co: conceito, tipografia e aplicações de marca por Vinicius Ramos." path="/projeto/varanda-co" jsonLd={[projectBreadcrumb("Varanda Co", "/projeto/varanda-co"), projectWork("Varanda Co", "Case de identidade visual da Varanda Co: conceito, tipografia e aplicações de marca por Vinicius Ramos.", "/projeto/varanda-co")]} />
       <Navigation />
       
       <main className="pt-20">
