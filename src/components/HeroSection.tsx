@@ -78,6 +78,7 @@ const HeroSection = () => {
             <div className="backdrop-blur-2xl bg-background/20 border border-foreground/15 rounded-2xl sm:rounded-3xl shadow-elevated p-5 sm:p-7 md:p-8 pointer-events-auto">
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold leading-tight text-foreground drop-shadow-md">
+                  <span className="sr-only">Prado Studio — Vinicius Ramos, Designer de Identidade Visual: </span>
                   {t('hero.title')}
                 </h1>
                 
